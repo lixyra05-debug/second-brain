@@ -1,0 +1,5 @@
+# Obsidian — état de l'espace de travail local, pas de sens à versionner
+.obsidian/workspace*
+
+# macOS
+.DS_Store
