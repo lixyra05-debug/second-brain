@@ -8,12 +8,10 @@ cree: 2026-07-03
 # Ads Studio
 
 ## Objectif
-*(proposition Claude — à valider)*
 Usine à créas publicitaires **semi-automatisée** : Claude Code + Higgsfield pour produire les créas, Meta Ads pour la diffusion, orchestration par Hermes. **Aucune exécution ni dépense sans validation d'Hector** (HITL).
 
 ## Statut
-*(proposition Claude — à valider)*
-Démarrage (juillet 2026) : périmètre, premières briques et priorité par rapport aux autres projets à préciser par Hector.
+Au 2026-07-04 : première commande brief exécutée avec succès. **Bloqueur : recharge des crédits Higgsfield** (4.31 restants ; pack 500 crédits / 26 $ recommandé) avant le premier run créatif complet. Meta Ads ne sera câblé qu'après validation des étapes de génération.
 
 ## Next actions
 - [ ] 

@@ -8,12 +8,10 @@ cree: 2026-07-03
 # Agent Alternance
 
 ## Objectif
-*(proposition Claude — à valider)*
 Décrocher une **alternance de 12 mois** en agents IA / automatisation pour la rentrée Ynov de septembre 2026, via un pipeline semi-automatisé : scraping des jobboards, scoring des offres par Claude, envoi des candidatures **validé à la main** — HITL obligatoire, aucun envoi automatique.
 
 ## Statut
-*(proposition Claude — à valider)*
-Recherche active (juillet 2026), échéance = la rentrée de septembre. État exact du pipeline (déjà en place ou à construire) à préciser par Hector.
+Au 2026-07-04 : 19 offres ingérées et scorées, **4 candidatures envoyées** — Vista IA (91/100), Docaposte (86), Nextories (80), Citeo (68, à finaliser sur leur site). Lead Mediawan en attente ; **relance de Muriel Caillet (Ynov) prioritaire**. CV et LM v3 (posture apprentissage) validés.
 
 ## Next actions
 - [ ] 
