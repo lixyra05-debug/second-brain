@@ -14,7 +14,7 @@ Construire le second brain Obsidian d'Hector : structure PARA + journal + espace
 Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage. Prochaines phases : remplissage/capture, puis Phase 3 (migrations éventuelles), Phase 5 (routines).
 
 ## Next actions
-- [ ] Hector valide [[contexte-hector]] (distillé du prompt de téléportation v4.0 le 2026-07-04)
+- [x] Hector valide [[contexte-hector]] (fait le 2026-07-04, sans correction)
 - [x] Hector valide les Objectifs/Statuts des 5 autres notes pivot (fait le 2026-07-04)
 - [ ] Hector configure le plugin core « Templates » d'Obsidian (dossier : `Templates/`)
 

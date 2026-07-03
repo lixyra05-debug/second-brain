@@ -6,7 +6,7 @@ cree: 2026-07-03
 
 # Contexte Hector
 
-> Distillé par Claude depuis le « prompt de téléportation » v4.0 (juin 2026), avec les corrections d'Hector du 2026-07-04. Hector valide et maintient ; Claude le lit en début de session et **propose** des mises à jour (R2 — jamais d'écrasement). Le doc v4.0 complet (comptes/accès, workflows détaillés, templates de projet) vit hors vault.
+> Distillé par Claude depuis le « prompt de téléportation » v4.0 (juin 2026), avec les corrections d'Hector du 2026-07-04. **Relu et validé par Hector le 2026-07-04.** Hector maintient ; Claude le lit en début de session et **propose** des mises à jour (R2 — jamais d'écrasement). Le doc v4.0 complet (comptes/accès, workflows détaillés, templates de projet) vit hors vault.
 
 ## Qui
 
