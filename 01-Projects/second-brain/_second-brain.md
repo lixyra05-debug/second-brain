@@ -14,9 +14,9 @@ Construire le second brain Obsidian d'Hector : structure PARA + journal + espace
 Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage. Prochaines phases : remplissage/capture, puis Phase 3 (migrations éventuelles), Phase 5 (routines).
 
 ## Next actions
-- [ ] Hector remplit [[contexte-hector]]
+- [ ] Hector valide [[contexte-hector]] (distillé du prompt de téléportation v4.0 le 2026-07-04)
+- [ ] Hector valide les Objectifs/Statuts proposés dans les 5 autres notes pivot
 - [ ] Hector configure le plugin core « Templates » d'Obsidian (dossier : `Templates/`)
-- [ ] Compléter les notes pivot des 5 autres projets (objectif + statut + tags)
 
 ## Décisions
 - 2026-07-03 — Trading-Bots-Vault reste un vault séparé ; import éventuel en Phase 3.
@@ -29,3 +29,6 @@ Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage
 ## Journal du projet
 ### 2026-07-03
 - Phase 1 exécutée : git init + commit baseline, création de la structure complète, CLAUDE.md, 6 templates, guide d'usage, notes pivot. Log : `AI/logs/2026-07-03-phase1.md`.
+
+### 2026-07-04
+- Contexte d'Hector distillé dans [[contexte-hector]] (doc v4.0 + corrections) ; Objectifs/Statuts proposés sur les 5 autres pivots (R2 — à valider). Log : `AI/logs/2026-07-04-session.md`.
