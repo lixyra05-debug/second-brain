@@ -1,7 +1,7 @@
 ---
 type: project
 statut: actif
-tags: [ia, agents, alternance]
+tags: [ia, agents, alternance, automation]
 cree: 2026-07-03
 ---
 

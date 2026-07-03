@@ -1,7 +1,7 @@
 ---
 type: project
 statut: actif
-tags: []
+tags: [sante, dev, business]
 cree: 2026-07-03
 ---
 

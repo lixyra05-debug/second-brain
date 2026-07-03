@@ -1,7 +1,7 @@
 ---
 type: project
 statut: actif
-tags: [ads, business]
+tags: [ads, ia, automation]
 cree: 2026-07-03
 ---
 

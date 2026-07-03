@@ -1,7 +1,7 @@
 ---
 type: project
 statut: actif
-tags: [automation, ia]
+tags: [ia, automation]
 cree: 2026-07-03
 ---
 

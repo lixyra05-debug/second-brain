@@ -1,7 +1,7 @@
 ---
 type: project
 statut: actif
-tags: [trading, agents, ia]
+tags: [trading, agents, automation]
 cree: 2026-07-03
 ---
 

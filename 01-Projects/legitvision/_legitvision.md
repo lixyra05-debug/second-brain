@@ -1,7 +1,7 @@
 ---
 type: project
 statut: actif
-tags: [ia]
+tags: [ia, business, dev]
 cree: 2026-07-03
 ---
 
