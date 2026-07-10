@@ -19,6 +19,7 @@ Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage
 - [ ] Hector configure le plugin core « Templates » d'Obsidian (dossier : `Templates/`)
 - [ ] Phase 4 : runbook ingestion wiki (tri inbox du 2026-07-10)
 - [ ] Phase 6 : AGENTS.md miroir Hermes/Codex (tri inbox du 2026-07-10)
+- [ ] Documenter hermes-polymarket + agent-alternance (repos VPS, ssh lecture seule — session dédiée)
 
 ## Décisions
 - 2026-07-03 — Trading-Bots-Vault reste un vault séparé ; import éventuel en Phase 3.
@@ -43,3 +44,4 @@ Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage
 ### 2026-07-10
 - 2 vidéos Nate Herk (méthode second brain, niveaux de Claude) fichées dans `03-Resources/videos/` ; 5 idées à trier dans [[idees-videos-second-brain]] (GO attendu). Log : `AI/logs/2026-07-10-session.md`.
 - Tri acté par Hector : R6 + critère evergreen dans `CLAUDE.md`, commande `/grille-moi` créée, Phases 4 et 6 au backlog, note d'idées annotée et archivée (premier item d'Inbox traité). Log : session 2 du même log.
+- Premier runbook créé ([[documenter-un-projet]], généralisé du pilote LegitVision) et appliqué à Vivo ; VPS au backlog. Log : session 4 du même log.

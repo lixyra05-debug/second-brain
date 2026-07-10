@@ -20,12 +20,12 @@ Au 2026-07-04 : **en production**, tiers payants actifs — legitvision.vercel.a
 - 
 
 ## Ressources liées
-- [[fiche-technique]] — stack, architecture, features, état de prod, pointeurs (repo, GitHub, prod)
-- [[decisions-et-lecons]] — décisions produit/tech et leçons durcies du projet
+- [[01-Projects/legitvision/fiche-technique|fiche-technique]] — stack, architecture, features, état de prod, pointeurs (repo, GitHub, prod)
+- [[01-Projects/legitvision/decisions-et-lecons|decisions-et-lecons]] — décisions produit/tech et leçons durcies du projet
 
 ## Journal du projet
 ### 2026-07-03
 - Note pivot créée (Phase 1 du second brain).
 
 ### 2026-07-10
-- Import pilote : [[fiche-technique]] et [[decisions-et-lecons]] distillées du repo local `~/legitvision` (lecture seule, aucun code copié). Log : `AI/logs/2026-07-10-session.md` (session 3).
+- Import pilote : [[01-Projects/legitvision/fiche-technique|fiche-technique]] et [[01-Projects/legitvision/decisions-et-lecons|decisions-et-lecons]] distillées du repo local `~/legitvision` (lecture seule, aucun code copié). Log : `AI/logs/2026-07-10-session.md` (session 3).

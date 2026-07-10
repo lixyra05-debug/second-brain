@@ -32,4 +32,5 @@ source: https://github.com/lixyra05-debug/legitvision
 
 ## Liens
 - [[_legitvision]]
-- [[fiche-technique]]
+- [[01-Projects/legitvision/fiche-technique|fiche-technique]]
+- [[01-Projects/vivo/decisions-et-lecons|decisions-et-lecons (Vivo)]]

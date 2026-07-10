@@ -20,8 +20,12 @@ Au 2026-07-04 : **feature-complete** — 700+ tests verts, écrans de conformit�
 - 
 
 ## Ressources liées
-- [[]]
+- [[01-Projects/vivo/fiche-technique|fiche-technique]] — stack, architecture, features, état (feature-complete, 723 tests verts), pointeurs
+- [[01-Projects/vivo/decisions-et-lecons|decisions-et-lecons]] — décisions produit/tech et leçons durcies du projet
 
 ## Journal du projet
 ### 2026-07-03
 - Note pivot créée (Phase 1 du second brain).
+
+### 2026-07-10
+- Import via [[documenter-un-projet]] : fiche technique et décisions/leçons distillées du repo local `~/projects/vivo` (lecture seule, aucun code copié). Log : `AI/logs/2026-07-10-session.md` (session 4).

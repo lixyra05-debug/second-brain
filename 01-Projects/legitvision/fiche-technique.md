@@ -44,4 +44,5 @@ Un dossier `remotion/` (vidéos) vit dans le repo, plus un repo séparé `~/legi
 
 ## Liens
 - [[_legitvision]]
-- [[decisions-et-lecons]]
+- [[01-Projects/legitvision/decisions-et-lecons|decisions-et-lecons]]
+- [[documenter-un-projet]]
