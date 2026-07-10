@@ -26,6 +26,8 @@ Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage
 
 ## Ressources liées
 - [[guide-d-usage-des-notes]]
+- [[Les 5 niveaux d'un second brain avec Claude]]
+- [[Les 5 niveaux d'utilisation de Claude]]
 
 ## Journal du projet
 ### 2026-07-03
@@ -34,3 +36,6 @@ Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage
 ### 2026-07-04
 - Contexte d'Hector distillé dans [[contexte-hector]] (doc v4.0 + corrections) ; Objectifs/Statuts proposés sur les 5 autres pivots (R2 — à valider). Log : `AI/logs/2026-07-04-session.md`.
 - Objectifs et Statuts validés par Hector ; Statuts remplacés par l'état réel au 04/07, mentions de proposition retirées.
+
+### 2026-07-10
+- 2 vidéos Nate Herk (méthode second brain, niveaux de Claude) fichées dans `03-Resources/videos/` ; 5 idées à trier dans [[idees-videos-second-brain]] (GO attendu). Log : `AI/logs/2026-07-10-session.md`.
