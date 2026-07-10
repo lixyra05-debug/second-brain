@@ -32,6 +32,7 @@ Détail des dossiers `AI/` :
 - **R3 — GO explicite avant tout changement structurel.** Renommage de masse, déplacements, modification de templates : rien ne se fait sans un GO d'Hector.
 - **R4 — Chaque session = un log** dans `AI/logs/YYYY-MM-DD-session.md` : notes lues / modifiées / créées / décisions en attente de GO.
 - **R5 — Atomicité.** 1 idée = 1 note, titre clair, [[liens]] vers les notes voisines, et les mots d'Hector.
+- **R6 — Boucle d'amélioration.** Quand Hector corrige une erreur de Claude, Claude propose une mise à jour de CLAUDE.md (ou du template concerné) pour ne plus la refaire. Appliquée après GO.
 
 ## 4. Conventions
 
@@ -72,6 +73,8 @@ Mode d'emploi humain : [[guide-d-usage-des-notes]] dans `03-Resources/`.
 - **« revue du jour »**
 - **« traite l'inbox »**
 - **« revue de la semaine »**
+
+**Critère de tri Inbox : evergreen** — « encore utile dans un an ? » Sinon la donnée reste dans son outil source, le vault ne garde que le pointeur.
 
 ## 7. Intégrations
 
