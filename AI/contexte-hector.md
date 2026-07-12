@@ -25,7 +25,7 @@ cree: 2026-07-03
 - [[_legitvision]] — SaaS d'authentification luxe (livré).
 - [[_vivo]] — app scanner nutrition/cosmétique (livrée, 700+ tests).
 - [[_second-brain]] — ce vault, Claude en architecte & concierge.
-- **En fond** : remedes-naturels (livré), bot automobile (scraping Python/Playwright + alertes Telegram), **Molty/OpenClaw** — agent de veille 24/7 sur le VPS, distinct du cockpit Hermes (ne pas les confondre).
+- **En fond** : remedes-naturels (livré), bot automobile (scraping Python/Playwright + alertes Telegram), **Molty/OpenClaw** — agent de veille 24/7 sur le VPS, distinct du cockpit Hermes (ne pas les confondre). *(Correction du 2026-07-12, mission VPS : Molty n'est pas déployé — user `openclaw` vide sur le serveur, seul le workspace local `~/clawd` existe ; la veille réelle qui tourne est `veillebot-weekly` sous Hermes, lundi 7h.)*
 
 ## Stack
 

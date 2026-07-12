@@ -20,7 +20,7 @@ Au 2026-07-04 : première commande brief exécutée avec succès. **Bloqueur : r
 - 
 
 ## Ressources liées
-- **Code** : VPS `/home/veillebot/ads-studio` — CLAUDE.md persona (« tu PROPOSES, Hector VALIDE ») + `brand/`, `briefs/`, `prompts/`, `ops/`, `reports/`, `advertising-masterclass.md`. ⚠️ Repo git initialisé mais **aucun commit** (zéro backup).
+- **Code** : VPS `/home/veillebot/ads-studio` — CLAUDE.md persona (« tu PROPOSES, Hector VALIDE ») + `brand/`, `briefs/`, `prompts/`, `ops/`, `reports/`, `advertising-masterclass.md`. **Backup GitHub privé** : https://github.com/lixyra05-debug/ads-studio (baseline du 2026-07-12).
 
 ## Journal du projet
 ### 2026-07-03
@@ -28,3 +28,4 @@ Au 2026-07-04 : première commande brief exécutée avec succès. **Bloqueur : r
 
 ### 2026-07-12
 - Mission VPS (ssh lecture seule) : le code vit sur le serveur (`~veillebot/ads-studio`, dernière activité 24/06) — pas de fiche (GO du 12/07 : le pivot fait foi), pointeur ci-dessus. Signalé : le repo n'a aucun commit. Log : `AI/logs/2026-07-12-session.md` (session 3).
+- Backup exécuté (GO Hector, écriture VPS limitée au repo) : `.gitignore` posé (.env*, credentials, logs/, *.db, settings.local.json), scan anti-secrets **0 hit**, commit `bd45ed9` « baseline ads-studio » (8 fichiers), repo privé `lixyra05-debug/ads-studio` créé et poussé. Log : session 4.
