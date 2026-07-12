@@ -15,7 +15,7 @@ cree: 2026-07-12
 | legitvision | `~/legitvision` | 110 | 2026-06-24 | **livré** | SaaS en prod — documenté le 10/07 ✅ |
 | vivo | `~/projects/vivo` | 34 | 2026-07-10 | **livré** | feature-complete ; ⚠️ RevenueCat intégré le 10/07 (`d4bc7d3`), postérieur à la fiche → état de la fiche à rafraîchir |
 | autonomous | `~/autonomous` | 49 | 2026-05-31 | **actif** (GO 12/07) | SaaS outbound **en prod** : autonomous.coldsend.app — pivot créé, documenté et ajouté à [[contexte-hector]] le 12/07 ✅ |
-| remedes-naturels | `~/projects/remedes-naturels` | 9 | 2026-05-04 | **livré** | ebooks via Stripe — pas encore documenté |
+| remedes-naturels | `~/projects/remedes-naturels` | 9 | 2026-05-04 | **livré** (pivot : pause) | ebooks via Stripe — documenté le 12/07 ✅ |
 | second-brain | `~/Documents/second-brain` | 11 | 2026-07-10 | **actif** | ce vault — auto-documenté ([[_second-brain]]) |
 | hermes-polymarket | VPS (openclaw) | ? | ? | **actif** | moteurs Python + 2 bots paper — session ssh dédiée (déjà au backlog) |
 | agent-alternance | VPS (openclaw) | ? | ? | **actif** | pipeline scraping/scoring/HITL — session ssh dédiée (déjà au backlog) |
