@@ -19,7 +19,7 @@ Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage
 - [ ] Hector configure le plugin core « Templates » d'Obsidian (dossier : `Templates/`)
 - [ ] Phase 4 : runbook ingestion wiki (tri inbox du 2026-07-10)
 - [ ] Phase 6 : AGENTS.md miroir Hermes/Codex (tri inbox du 2026-07-10)
-- [ ] Documenter hermes-polymarket + agent-alternance (repos VPS, ssh lecture seule — session dédiée)
+- [ ] Documenter hermes-polymarket + agent-alternance, et localiser bot-automobile / molty-openclaw / code ads-studio (repos VPS, ssh lecture seule — session dédiée ; fiches selon trouvaille)
 
 ## Décisions
 - 2026-07-03 — Trading-Bots-Vault reste un vault séparé ; import éventuel en Phase 3.
@@ -27,6 +27,7 @@ Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage
 - 2026-07-03 — Chaque phase se termine par un commit git.
 - 2026-07-04 — Objectifs/Statuts des 5 pivots validés ; extraction des runbooks du doc v4.0 reportée après la Phase 5.
 - 2026-07-10 — Tri de [[idees-videos-second-brain]] : /grille-moi, R6 et critère evergreen actés et appliqués ; runbook ingestion wiki → Phase 4 ; AGENTS.md miroir → Phase 6 ; note archivée.
+- 2026-07-12 — Inventaire des projets ([[inventaire-projets]]) trié par Hector : autonomous (actif, découvert par l'inventaire) et remedes-naturels (pause) entrent dans 01-Projects ; expérimentaux/abandonnés restent sans fiche ; mission VPS élargie (bot-automobile, code ads-studio).
 
 ## Ressources liées
 - [[guide-d-usage-des-notes]]
@@ -45,3 +46,6 @@ Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage
 - 2 vidéos Nate Herk (méthode second brain, niveaux de Claude) fichées dans `03-Resources/videos/` ; 5 idées à trier dans [[idees-videos-second-brain]] (GO attendu). Log : `AI/logs/2026-07-10-session.md`.
 - Tri acté par Hector : R6 + critère evergreen dans `CLAUDE.md`, commande `/grille-moi` créée, Phases 4 et 6 au backlog, note d'idées annotée et archivée (premier item d'Inbox traité). Log : session 2 du même log.
 - Premier runbook créé ([[documenter-un-projet]], généralisé du pilote LegitVision) et appliqué à Vivo ; VPS au backlog. Log : session 4 du même log.
+
+### 2026-07-12
+- Inventaire complet des projets Claude Code (3 sources croisées) puis Phase 2 sur GO : autonomous et remedes-naturels documentés (2 nouveaux pivots — 8 dossiers projets désormais), vivo rafraîchi, contexte-hector corrigé, mission VPS élargie. Log : `AI/logs/2026-07-12-session.md`.

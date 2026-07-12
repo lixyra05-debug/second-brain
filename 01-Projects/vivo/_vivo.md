@@ -11,7 +11,7 @@ cree: 2026-07-03
 App mobile (React Native / Expo) de scan nutrition + cosmétique : barcode + OCR d'étiquettes via Claude Vision, scoring multi-critères (additifs, NOVA, packaging, naturalité — sources EFSA/EMA/ANSES/CIRC), traçage de propriété des marques via Wikidata, 40 plantes médicinales, mode famille, deux tiers Premium/Expert.
 
 ## Statut
-Au 2026-07-04 : **feature-complete** — 700+ tests verts, écrans de conformité App Store faits. **Bloqueur : compte Apple Developer**, puis Play Console, RevenueCat, builds EAS et soumission.
+Au 2026-07-12 : **feature-complete, RevenueCat fait** (achats Premium/Expert + restore, `d4bc7d3` du 10/07). **Bloqueur restant : compte Apple Developer** → EAS/TestFlight → screenshots → soumission.
 
 ## Next actions
 - [ ] 
@@ -29,3 +29,6 @@ Au 2026-07-04 : **feature-complete** — 700+ tests verts, écrans de conformit�
 
 ### 2026-07-10
 - Import via [[documenter-un-projet]] : fiche technique et décisions/leçons distillées du repo local `~/projects/vivo` (lecture seule, aucun code copié). Log : `AI/logs/2026-07-10-session.md` (session 4).
+
+### 2026-07-12
+- Statut rafraîchi sur ordre d'Hector : RevenueCat intégré le 10/07 (`d4bc7d3`, détecté par l'inventaire) ; fiche technique mise à jour. Log : `AI/logs/2026-07-12-session.md` (lot C).

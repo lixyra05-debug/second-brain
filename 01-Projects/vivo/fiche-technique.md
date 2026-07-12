@@ -7,13 +7,13 @@ source: https://github.com/lixyra05-debug/vivo
 
 # Vivo — fiche technique
 
-> Distillée le 2026-07-10 depuis le repo local (lecture seule) : CLAUDE.md du repo (382 lignes, lu en entier), PRD, package.json/app.json/eas.json, migrations, git log (33 commits). Connaissance + pointeurs uniquement (critère evergreen).
+> Distillée le 2026-07-10 depuis le repo local (lecture seule) : CLAUDE.md du repo (382 lignes, lu en entier), PRD, package.json/app.json/eas.json, migrations, git log (33 commits). **Mise à jour le 2026-07-12** : RevenueCat intégré (`d4bc7d3`). Connaissance + pointeurs uniquement (critère evergreen).
 
 ## Stack
 - **Expo SDK 54 / React Native 0.81** (React 19, New Architecture), TypeScript strict, Expo Router (file-based), NativeWind + React Native Paper, Zustand + TanStack Query, expo-camera ; npm (installs via `npx expo install` uniquement).
 - **Supabase** (West EU Irlande) : Auth, PostgreSQL RLS, Storage, Edge Function `analyze-ingredients` (OCR Claude Vision — la clé Anthropic reste côté serveur).
 - **Données produits** : Open Food Facts v2 (`fr.openfoodfacts.org`) + Open Beauty Facts en cascade food→cosmétique, caches locaux ; Wikidata SPARQL pour la maison-mère des marques.
-- **Monétisation & ops** : RevenueCat (IAP, à brancher) + Stripe web, Sentry (filtre PII strict), PostHog (reporté), EAS Build/Submit (dev/preview/production, autoIncrement).
+- **Monétisation & ops** : RevenueCat (IAP iOS/Android, **intégré** — achats Premium/Expert + restore, `d4bc7d3`) + Stripe web, Sentry (filtre PII strict), PostHog (reporté), EAS Build/Submit (dev/preview/production, autoIncrement).
 - **Tests** : Jest + RNTL — **723 tests verts**, compteur suivi commit par commit, `npx expo export` avant chaque commit.
 
 ## Architecture (en bref)
@@ -33,9 +33,9 @@ L'univers plantes (40 fiches, 30 recettes, 5 protocoles de 21 jours) est en **da
 - **Conformité** : RGPD (consentement CGU versionné, droit à l'effacement, `deletion_requests`), App Store (disclaimers, auto-renouvellement, suppression de compte, attribution OFF).
 
 ## État de prod
-- **Feature-complete, non publiée** — 723 tests verts, conformité App Store faite (`63395af`), dernières features : OCR étiquettes (`4c3b979`) et packaging + maison-mère (`15ca83a`).
-- **Bloqueur : compte Apple Developer**, puis Play Console, RevenueCat, builds EAS et soumission (cf. [[_vivo]]).
-- Reportés en attendant : branchement RevenueCat (paywalls UI prêts, gating actif), PostHog, OTA updates.
+- **Feature-complete, non publiée** — 723+ tests verts, conformité App Store faite (`63395af`) ; derniers ajouts : OCR étiquettes (`4c3b979`), packaging + maison-mère (`15ca83a`), **RevenueCat intégré** (achats Premium/Expert + restore, `d4bc7d3`, 2026-07-10).
+- **Bloqueur restant : compte Apple Developer** → EAS/TestFlight → screenshots → soumission (statut du 2026-07-12, cf. [[_vivo]]).
+- Reportés en attendant : PostHog, OTA updates.
 
 ## Pointeurs
 - **Repo local** : `/Users/volanthector/projects/vivo`
