@@ -17,11 +17,11 @@ cree: 2026-07-12
 | autonomous | `~/autonomous` | 49 | 2026-05-31 | **actif** (GO 12/07) | SaaS outbound **en prod** : autonomous.coldsend.app — pivot créé, documenté et ajouté à [[contexte-hector]] le 12/07 ✅ |
 | remedes-naturels | `~/projects/remedes-naturels` | 9 | 2026-05-04 | **livré** (pivot : pause) | ebooks via Stripe — documenté le 12/07 ✅ |
 | second-brain | `~/Documents/second-brain` | 11 | 2026-07-10 | **actif** | ce vault — auto-documenté ([[_second-brain]]) |
-| hermes-polymarket | VPS (openclaw) | ? | ? | **actif** | moteurs Python + 2 bots paper — session ssh dédiée (déjà au backlog) |
-| agent-alternance | VPS (openclaw) | ? | ? | **actif** | pipeline scraping/scoring/HITL — session ssh dédiée (déjà au backlog) |
-| ads-studio | aucun repo local identifié | — | — | **actif** | orchestration Hermes + Higgsfield + Meta Ads ; pas de codebase sur ce Mac — GO 12/07 : pas de fiche, le pivot fait foi ; vérif VPS à venir |
-| molty-openclaw | VPS + workspace `~/clawd` | 0 (local) | — | **actif** | agent de veille 24/7 ; `~/clawd` = workspace identité (SOUL/IDENTITY/HEARTBEAT…), git vide |
-| bot-automobile | non localisé (VPS ?) | ? | ? | **actif ?** | scraping Playwright + alertes Telegram — GO 12/07 : ajouté à la mission VPS du backlog, fiche selon trouvaille |
+| hermes-polymarket | VPS — `~veillebot/.hermes/skills` | 3 (repo skills) | 2026-06-17 (commit) · ops le 12/07 | **actif** | 2 bots paper + cockpit, 14 unités systemd ; revue validation Atlas le 17/07 — documenté le 12/07 ✅ |
+| agent-alternance | VPS — `~veillebot/alternance` | pas de git | 2026-07-12 (offres du matin) | **actif** | pipeline script-only FT/Perplexity, brief 7h45, HITL absolu — documenté le 12/07 ✅ |
+| ads-studio | VPS — `~veillebot/ads-studio` | 0 (git init **sans commit**) | 2026-06-24 (mtime) | **actif** | code trouvé sur le VPS le 12/07, pointé dans le pivot (pas de fiche, GO) ; ⚠️ jamais commité = zéro backup |
+| molty-openclaw | user `openclaw` (VPS, vide) + `~/clawd` (Mac) | 0 | 2026-04-07 | **expérimental** (constat 12/07) | rien de déployé : user VPS vide (dotfiles d'avril), workspace identité local seulement ; la veille réelle = `veillebot-weekly` (Hermes, lundi 7h) |
+| bot-automobile | **code introuvable** (Mac + VPS vérifiés 12/07) | — | — | **non localisé** | scraping Playwright + alertes Telegram ([[contexte-hector]]) — aucune trace trouvée ; à pointer par Hector s'il existe encore quelque part |
 | excuses-amandine | `~/Desktop/excuses-amandine` | pas de git | ~2026-06-30 | **expérimental** | one-shot perso (médias + page), sessions Claude Code |
 | electricien-360 | `~/electricien-360` | 1 | 2026-01-18 | **abandonné** (confirmé 12/07) | create-next-app jamais développé (unique commit d'init, pas de déploiement) + zip dans le home |
 | New project | `~/Documents/New project` | 0 | — | **abandonné** | scratch HTML/CSS/JS, git vide |

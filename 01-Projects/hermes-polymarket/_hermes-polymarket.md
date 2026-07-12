@@ -20,8 +20,13 @@ Au 2026-07-04 : **3 GO en attente** — config A/B Flipadelphia + Kickstand7 (25
 - 
 
 ## Ressources liées
-- [[]]
+- [[01-Projects/hermes-polymarket/fiche-technique|fiche-technique]] — bots, cadences systemd, cockpit, pointeurs VPS
+- [[01-Projects/hermes-polymarket/decisions-et-lecons|decisions-et-lecons]] — décisions d'architecture et leçons durcies
+- **Satellite** : Trading-Bots-Vault — vault Obsidian séparé des bots (`~/Downloads/Trading-Bots-Vault` sur le Mac ; décision du 03/07 : import éventuel en Phase 3)
 
 ## Journal du projet
 ### 2026-07-03
 - Note pivot créée (Phase 1 du second brain).
+
+### 2026-07-12
+- Import VPS via [[documenter-un-projet]] (ssh lecture seule, user veillebot — aucun fichier modifié sur le serveur). À noter : la revue de fin de validation paper d'Atlas (fenêtre A/B v2) est programmée par timer one-shot le **2026-07-17 18:30 UTC**. Log : `AI/logs/2026-07-12-session.md` (session 3).
