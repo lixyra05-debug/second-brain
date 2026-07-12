@@ -21,6 +21,7 @@ cree: 2026-07-03
 - [[_agent-alternance]] — décrocher l'alternance via un pipeline semi-auto : scraping jobboards, scoring Claude, envoi validé à la main (HITL obligatoire).
 - [[_hermes-polymarket]] — trading autonome sur Polymarket : moteurs Python **déterministes** qui décident, Hermes Agent en simple cockpit. 2 bots en paper (validation en cours), Bot 3 gaté.
 - [[_ads-studio]] — usine à créas pub semi-auto (Claude Code + Higgsfield + Meta Ads, orchestrée par Hermes). Aucune exécution ni dépense sans GO d'Hector.
+- [[_autonomous]] — SaaS outbound B2B : une URL d'entreprise → 50 prospects qualifiés + emails personnalisés, en prod sur autonomous.coldsend.app. *(Ajouté le 2026-07-12 — trou découvert par l'inventaire des projets, ajout demandé par Hector.)*
 - [[_legitvision]] — SaaS d'authentification luxe (livré).
 - [[_vivo]] — app scanner nutrition/cosmétique (livrée, 700+ tests).
 - [[_second-brain]] — ce vault, Claude en architecte & concierge.
