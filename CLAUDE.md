@@ -54,6 +54,9 @@ source:                           # resources uniquement (URL, livre, cours…)
 ### Tags — vocabulaire fermé (ne pas en inventer)
 `ia` · `agents` · `trading` · `ads` · `alternance` · `ynov` · `business` · `automation` · `dev` · `finance` · `sante` · `idee`
 
+### Versionnage
+- Tout le vault se committe, **dailies incluses** — le journal fait partie du vault. Ne sont ignorés que les fichiers locaux à la machine : `.claude/settings.local.json`, `.obsidian/workspace*`, `.DS_Store`.
+
 ## 5. Templates
 
 | Template | Usage | Dossier cible |

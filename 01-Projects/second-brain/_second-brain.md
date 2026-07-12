@@ -16,7 +16,7 @@ Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage
 ## Next actions
 - [x] Hector valide [[contexte-hector]] (fait le 2026-07-04, sans correction)
 - [x] Hector valide les Objectifs/Statuts des 5 autres notes pivot (fait le 2026-07-04)
-- [ ] Hector configure le plugin core « Templates » d'Obsidian (dossier : `Templates/`)
+- [x] Hector configure le plugin core « Templates » d'Obsidian (dossier : `Templates/`) — fait, constaté dans `.obsidian/templates.json` le 2026-07-12 (daily notes câblées aussi : `05-Journal` + `tpl-daily`)
 - [ ] Phase 4 : runbook ingestion wiki (tri inbox du 2026-07-10)
 - [ ] Phase 6 : AGENTS.md miroir Hermes/Codex (tri inbox du 2026-07-10)
 - [ ] Documenter hermes-polymarket + agent-alternance, et localiser bot-automobile / molty-openclaw / code ads-studio (repos VPS, ssh lecture seule — session dédiée ; fiches selon trouvaille)
