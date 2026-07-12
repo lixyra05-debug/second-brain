@@ -19,7 +19,8 @@ Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage
 - [x] Hector configure le plugin core « Templates » d'Obsidian (dossier : `Templates/`) — fait, constaté dans `.obsidian/templates.json` le 2026-07-12 (daily notes câblées aussi : `05-Journal` + `tpl-daily`)
 - [ ] Phase 4 : runbook ingestion wiki (tri inbox du 2026-07-10)
 - [x] Phase 6 : AGENTS.md miroir Hermes/Codex (tri inbox du 2026-07-10) — fait le 2026-07-12 : AGENTS.md = constitution, CLAUDE.md = `@AGENTS.md`, import vérifié sur session fraîche
-- [ ] Documenter hermes-polymarket + agent-alternance, et localiser bot-automobile / molty-openclaw / code ads-studio (repos VPS, ssh lecture seule — session dédiée ; fiches selon trouvaille)
+- [x] Documenter hermes-polymarket + agent-alternance, et localiser bot-automobile / molty-openclaw / code ads-studio (repos VPS, ssh lecture seule — session dédiée ; fiches selon trouvaille) — fait le 2026-07-12 (fiches créées ; bot-automobile introuvable ; molty non déployé ; ads-studio localisé puis backupé)
+- [ ] Porter /grille-moi en skill Codex ($grille-moi) — gaté derrière la première utilisation réelle côté Claude Code
 
 ## Décisions
 - 2026-07-03 — Trading-Bots-Vault reste un vault séparé ; import éventuel en Phase 3.
@@ -29,6 +30,7 @@ Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage
 - 2026-07-10 — Tri de [[idees-videos-second-brain]] : /grille-moi, R6 et critère evergreen actés et appliqués ; runbook ingestion wiki → Phase 4 ; AGENTS.md miroir → Phase 6 ; note archivée.
 - 2026-07-12 — Inventaire des projets ([[inventaire-projets]]) trié par Hector : autonomous (actif, découvert par l'inventaire) et remedes-naturels (pause) entrent dans 01-Projects ; expérimentaux/abandonnés restent sans fiche ; mission VPS élargie (bot-automobile, code ads-studio).
 - 2026-07-12 — **Phase 6 exécutée** (GO Hector) : AGENTS.md devient la constitution du vault, règles généralisées à tout agent (« l'agent » au lieu de « Claude », R6 pointe AGENTS.md) + sections Spécifique Claude Code / Spécifique Codex ; CLAUDE.md réduit à l'import officiel `@AGENTS.md`. Import vérifié : session fraîche sans outils récite R1-R6 et le critère evergreen.
+- 2026-07-12 — Référence Codex ingérée ([[codex-cli-reference]]), §9 de la constitution rempli ; **Memories Codex volontairement désactivées — le vault est l'unique mémoire partagée entre agents** ; `~/.codex/AGENTS.md` global créé (il n'existait pas), pointant vers la constitution.
 
 ## Ressources liées
 - [[guide-d-usage-des-notes]]

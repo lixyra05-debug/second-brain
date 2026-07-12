@@ -95,4 +95,8 @@ Mode d'emploi humain : [[guide-d-usage-des-notes]] dans `03-Resources/`.
 
 ## 9. Spécifique Codex
 
-*Rien pour l'instant.* Codex lit nativement `AGENTS.md` — section réservée aux particularités (mémoire, commandes) le jour où un agent Codex opérera dans le vault.
+- Codex lit nativement ce fichier : concaténation du global (`~/.codex/AGENTS.md`) puis du projet — le plus proche du répertoire courant domine ; **limite 32 KiB par défaut** (`project_doc_max_bytes`).
+- Sandbox `workspace-write` : **lecture partout, écriture/exécution limitées au workspace** — pour écrire ici depuis un autre repo, relancer avec `--add-dir ~/Documents/second-brain` (writable roots = écriture uniquement).
+- Commandes custom : **skills** `SKILL.md` dans `~/.codex/skills/`, invocation `$nom` (les prompts `~/.codex/prompts/` sont l'ancien système, invocation `/prompts:nom`).
+- **Décision (2026-07-12) : Memories Codex volontairement désactivées** — off par défaut, SQLite interne non mappable sur une note ; **le vault est l'unique mémoire partagée entre agents.**
+- Référence complète : `03-Resources/docs-techniques/codex-cli-reference.md` ([[codex-cli-reference]]).
