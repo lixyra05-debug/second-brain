@@ -7,13 +7,15 @@ cree: 2026-07-12
 # Inventaire des projets Claude Code
 
 > Recensement du 2026-07-12, lecture seule. Sources croisées : dossiers de sessions `~/.claude/projects/`, chemins projets de `~/.claude.json` (clés uniquement — aucun transcript lu), `find ~ -maxdepth 4 -name .git` (hors Library/node_modules/.Trash), [[contexte-hector]] et les 6 pivots. **Tri confirmé par Hector le 2026-07-12** — verdicts annotés dans les tableaux ; autonomous reclassé **actif**.
+>
+> **Correction du 2026-07-31** (arbitrage du rêve du 31/07) : « livré » n'est pas un statut. `legitvision` et `vivo` portent `statut: actif` en frontmatter et c'est correct — leurs lignes passent à « actif — en production » et « actif — en cours de publication ». La règle est désormais dans la constitution (§4) : quand une catégorie d'inventaire contredit le frontmatter d'un pivot, **c'est l'inventaire qui s'aligne**.
 
 ## Projets construits
 
 | Projet | Chemin | Commits | Dernière activité | Catégorie proposée | Note |
 |---|---|---|---|---|---|
-| legitvision | `~/legitvision` | 110 | 2026-06-24 | **livré** | SaaS en prod — documenté le 10/07 ✅ |
-| vivo | `~/projects/vivo` | 34 | 2026-07-10 | **livré** | feature-complete, RevenueCat intégré (`d4bc7d3`) — fiche + pivot rafraîchis le 12/07 ✅ |
+| legitvision | `~/legitvision` | 110 | 2026-06-24 | **actif — en production** | SaaS en prod — documenté le 10/07 ✅ |
+| vivo | `~/projects/vivo` | 34 | 2026-07-10 | **actif — en cours de publication** | feature-complete, RevenueCat intégré (`d4bc7d3`) — fiche + pivot rafraîchis le 12/07 ✅ |
 | autonomous | `~/autonomous` | 49 | 2026-05-31 | **actif** (GO 12/07) | SaaS outbound **en prod** : autonomous.coldsend.app — pivot créé, documenté et ajouté à [[contexte-hector]] le 12/07 ✅ |
 | remedes-naturels | `~/projects/remedes-naturels` | 9 | 2026-05-04 | **livré** (pivot : pause) | ebooks via Stripe — documenté le 12/07 ✅ |
 | second-brain | `~/Documents/second-brain` | 11 | 2026-07-10 | **actif** | ce vault — auto-documenté ([[_second-brain]]) |

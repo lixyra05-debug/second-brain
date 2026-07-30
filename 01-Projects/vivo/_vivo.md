@@ -14,10 +14,10 @@ App mobile (React Native / Expo) de scan nutrition + cosmétique : barcode + OCR
 Au 2026-07-12 : **feature-complete, RevenueCat fait** (achats Premium/Expert + restore, `d4bc7d3` du 10/07). **Bloqueur restant : compte Apple Developer** → EAS/TestFlight → screenshots → soumission.
 
 ## Next actions
-- [ ] 
+- [ ] (à remplir)
 
 ## Décisions
-- 
+- (à remplir)
 
 ## Ressources liées
 - [[01-Projects/vivo/fiche-technique|fiche-technique]] — stack, architecture, features, état (feature-complete, 723 tests verts), pointeurs

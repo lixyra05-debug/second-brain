@@ -14,10 +14,10 @@ SaaS d'authentification d'articles de luxe par vision : Claude Vision API analys
 Au 2026-07-04 : **en production**, tiers payants actifs — legitvision.vercel.app.
 
 ## Next actions
-- [ ] 
+- [ ] (à remplir)
 
 ## Décisions
-- 
+- (à remplir)
 
 ## Ressources liées
 - [[01-Projects/legitvision/fiche-technique|fiche-technique]] — stack, architecture, features, état de prod, pointeurs (repo, GitHub, prod)

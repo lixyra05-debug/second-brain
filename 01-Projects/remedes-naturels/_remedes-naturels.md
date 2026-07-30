@@ -14,7 +14,7 @@ Vente directe d'ebooks « remèdes naturels » (2 PDF : *La santé par les plant
 Au 2026-07-12 : **livré, en pause** (tri d'inventaire du 2026-07-12). Flux de paiement vérifié en LIVE (test à 1 € puis prix restauré — dernier commit 2026-05-04). Déploiement non tracé dans le repo local.
 
 ## Next actions
-- [ ]
+- [ ] (à remplir)
 
 ## Décisions
 - 2026-07-12 — Entré au vault via [[inventaire-projets]] ; statut **pause** acté par Hector.

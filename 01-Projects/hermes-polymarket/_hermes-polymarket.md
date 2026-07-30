@@ -25,10 +25,10 @@ Système de trading autonome sur Polymarket, 24/7 sur le VPS Hetzner : la décis
 Au 2026-07-04 : **3 GO en attente** — config A/B Flipadelphia + Kickstand7 (25 $ chacun, remplace Sharkbets), fix de la persistance recency du finder, sanity-check des timestamps de verdicts API. Formule d'edge du Bot 1 corrigée (Σbid − 1). Bot 3 toujours gaté.
 
 ## Next actions
-- [ ] 
+- [ ] (à remplir)
 
 ## Décisions
-- 
+- (à remplir)
 
 ## Ressources liées
 - [[01-Projects/hermes-polymarket/fiche-technique|fiche-technique]] — bots, cadences systemd, cockpit, pointeurs VPS

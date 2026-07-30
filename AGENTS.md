@@ -18,7 +18,7 @@ second-brain/
 ├── 03-Resources/        ← matière externe : cours/, articles/, videos/, docs-techniques/, wiki/
 ├── 04-Archive/          ← tout ce qui sort du flux actif ; on n'y supprime rien, on y range
 ├── 05-Journal/          ← notes quotidiennes YYYY-MM-DD.md
-├── AI/                  ← espace de travail de l'agent : logs/, index/, runbooks/, contexte-hector.md
+├── AI/                  ← espace de travail de l'agent : logs/, index/, runbooks/, dreams/, contexte-hector.md
 └── Templates/           ← modèles de notes (plugin core « Templates » d'Obsidian)
 ```
 
@@ -26,6 +26,7 @@ Détail des dossiers `AI/` :
 - `AI/logs/` — un log par session d'agent (`YYYY-MM-DD-session.md`).
 - `AI/index/` — index, MOC et cartes générés par l'agent.
 - `AI/runbooks/` — procédures pas-à-pas réutilisables (une note par procédure).
+- `AI/dreams/` — rêves de consolidation (`YYYY-MM-DD-dream.md`), un par run de `/dream` : relecture du vault et propositions. Le rêve ne modifie rien — Hector arbitre section par section.
 - `AI/contexte-hector.md` — contexte vivant sur Hector, lu en début de session.
 
 ## 3. Règles inviolables
@@ -54,6 +55,8 @@ cree: YYYY-MM-DD
 source:                           # resources uniquement (URL, livre, cours…)
 ```
 
+`statut` est un **vocabulaire fermé** lui aussi : `actif | pause | termine`. **« livré » n'est pas un statut** — un projet livré mais encore en production, ou en cours de publication, reste `actif` ; `termine` signifie qu'on n'y touche plus. Les notes d'index et d'inventaire *décrivent* un projet, elles n'inventent pas de statut : si une catégorie d'inventaire contredit le frontmatter d'un pivot, c'est l'inventaire qui s'aligne.
+
 ### Tags — vocabulaire fermé (ne pas en inventer)
 `ia` · `agents` · `trading` · `ads` · `alternance` · `ynov` · `business` · `automation` · `dev` · `finance` · `sante` · `idee`
 
@@ -75,10 +78,7 @@ Mode d'emploi humain : [[guide-d-usage-des-notes]] dans `03-Resources/`.
 
 ## 6. Routines
 
-*À définir en Phase 5.* Déclencheurs prévus :
-- **« revue du jour »**
-- **« traite l'inbox »**
-- **« revue de la semaine »**
+Routines : `/dream` tient la revue périodique (relecture + propositions). Restent à définir : **« revue du jour »** et **« traite l'inbox »**.
 
 **Critère de tri Inbox : evergreen** — « encore utile dans un an ? » Sinon la donnée reste dans son outil source, le vault ne garde que le pointeur.
 
@@ -90,7 +90,9 @@ Mode d'emploi humain : [[guide-d-usage-des-notes]] dans `03-Resources/`.
 ## 8. Spécifique Claude Code
 
 - `CLAUDE.md` = `@AGENTS.md` : cette constitution est chargée automatiquement à chaque session.
-- Commandes projet dans `.claude/commands/` : `/grille-moi <sujet>` — interview de capture, une question à la fois, notes brutes dans `00-Inbox/`.
+- Commandes projet dans `.claude/commands/` :
+  - `/grille-moi <sujet>` — interview de capture, une question à la fois, notes brutes dans `00-Inbox/`.
+  - `/dream` — consolidation de mémoire : lit tout le vault, ne modifie rien, produit `AI/dreams/YYYY-MM-DD-dream.md` (digest, statuts périmés, consolidations, graines de wiki, miroir). Périmètre strict : le vault seul — jamais `~/.claude/projects/`, jamais le VPS, jamais un autre dossier.
 - Réglages locaux à la machine : `.claude/settings.local.json` (ignoré par git, jamais commité).
 
 ## 9. Spécifique Codex
