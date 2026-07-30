@@ -22,6 +22,7 @@ source: VPS openclaw (ssh, lecture seule 2026-07-12) — /home/veillebot/.hermes
 - **Auditer à date fixe, par écrit** : `audit_bots`, `bot1_terrain`, `atlas_source_ranking`, diagnostic de deadlock — les problèmes (deadlock Bot 1, qualité des sources Atlas) ont été trouvés par des audits datés en markdown, la même culture que LegitVision/Vivo.
 - **Un venv partagé pour tous les timers** (`notebooklm-veillebot/venv`) : un seul environnement à maintenir — et un seul point de casse ; à garder en tête au premier conflit de dépendances.
 - **La formule d'edge se corrige par écrit** (pivot du 04/07 : Σbid − 1) : les corrections de logique de trading passent par le pivot et les audits, jamais silencieusement.
+- **Winrate n'est pas edge** (verdict Atlas, 17/07 — relu en ssh lecture seule le 30/07) : la fenêtre A/B paper ~14 j s'est close **net négative sur le miroir actif** — `0x44886115…` à 43 % de winrate mais **−$23.53** sur 53 clôtures (les pertes pèsent plus que les gains), tandis que `0xd1acd392…` sortait à +$8.66 sur 4 clôtures seulement (échantillon trop mince pour conclure). Copier des wallets « smart money » ne crée pas d'edge en soi : sans filtre de sélection ni sizing propres, l'asymétrie de payoff mange le taux de réussite. Conforme au design — le one-shot a envoyé les chiffres « à arbitrer », il n'a pas jugé (« un cron ne juge pas », cf. décision *Fin d'expérience datée d'avance*).
 
 ## Liens
 - [[_hermes-polymarket]]
