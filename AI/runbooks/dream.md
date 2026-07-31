@@ -11,13 +11,11 @@ Le rêve hebdomadaire tourne tout seul et prévient par notification macOS. **Un
 
 Ce qu'il fait : lit tout le vault, écrit `AI/dreams/YYYY-MM-DD-dream.md` en six sections, écrit son log de session, **et s'arrête là**. Il n'applique rien, ne commite rien, ne pousse rien.
 
-> ⚠️ **UNE ACTION MANUELLE RESTE À FAIRE — sans elle, le rêve automatique ne tournera pas.**
-> Voir *« Le blocage macOS »* ci-dessous. Tout le reste est en place et testé.
-
 ## Les pièces
 
 | Pièce | Chemin | Versionnée ? |
 |---|---|---|
+| **Le vault** | **`~/second-brain`** — hors `~/Documents`, et c'est essentiel (voir plus bas) | — |
 | La commande | `.claude/commands/dream.md` | **oui** (dans le vault) |
 | Le wrapper | `~/.local/bin/dream-weekly.sh` | non — hors vault, contenu recopié ci-dessous |
 | Le déclencheur | `~/Library/LaunchAgents/com.hectorvolant.secondbrain.dream.plist` | non — hors vault |
@@ -25,18 +23,24 @@ Ce qu'il fait : lit tout le vault, écrit `AI/dreams/YYYY-MM-DD-dream.md` en six
 
 Label launchd : **`com.hectorvolant.secondbrain.dream`**
 
-## Le blocage macOS — à lever une fois
+## Pourquoi le vault vit à `~/second-brain` et pas dans `~/Documents`
 
-**Constaté au test du 2026-07-31.** macOS protège `~/Documents` (mécanisme TCC). Un process lancé par **launchd** n'y a **aucun accès** par défaut, même en étant le bon utilisateur. Le vault y vivant, le rêve automatique ne peut rien lire tant que ce n'est pas levé.
+**C'est la pièce maîtresse du montage, et ce n'est pas un détail de rangement.**
 
-Preuve du test : `git status` dans le vault renvoie `fatal: Unable to read current working directory: Operation not permitted` depuis launchd, alors que **le même script lancé depuis le Terminal fonctionne parfaitement** — c'est bien une question de permission, pas de code.
+macOS protège `~/Documents`, `~/Desktop` et `~/Downloads` par TCC. Un process lancé par **launchd** n'y a **aucun accès** par défaut, même en étant le bon utilisateur. Tant que le vault était dans `~/Documents`, le rêve automatique ne pouvait rien lire : `git status` renvoyait `fatal: Unable to read current working directory: Operation not permitted` **depuis launchd**, alors que le même script lancé depuis le Terminal fonctionnait parfaitement — une question de permission, pas de code.
 
-**Le correctif, à faire à la main :**
-> Réglages Système › Confidentialité et sécurité › **Accès complet au disque** › `+` › `⌘⇧G` › taper `/bin/zsh` › Ouvrir › activer l'interrupteur.
+Deux issues possibles :
 
-Puis vérifier : `launchctl kickstart -p gui/$(id -u)/com.hectorvolant.secondbrain.dream` doit afficher `préflight: lecture du vault OK` dans le log.
+| | Effet |
+|---|---|
+| Accorder l'**accès complet au disque** à `/bin/zsh` | Fonctionne, mais donne cet accès à **tout script zsh lancé par launchd**, pas seulement à celui-ci. Large et durable. |
+| **Déplacer le vault hors de `~/Documents`** ✅ | `~/` n'est pas protégé : le problème disparaît. **Aucune permission élargie, aucun réglage système.** |
 
-**Le compromis, à connaître** : accorder l'accès complet au disque à `/bin/zsh` le donne à **tout script zsh lancé par launchd**, pas seulement à celui-ci. C'est la méthode standard pour un agent launchd qui touche un dossier protégé, mais c'est large. Les alternatives sont pires : déplacer le vault hors de `~/Documents`, ou renoncer à l'automatisation.
+**Choix retenu le 2026-07-31 : le déplacement** (`mv ~/Documents/second-brain ~/second-brain`). Le dépôt git a voyagé avec le dossier — `.git` est à l'intérieur et ne contient aucun chemin absolu, donc remote et suivi de branche sont intacts.
+
+Vérifié après le déplacement : `préflight: lecture du vault OK` dans le log, **sans qu'aucune autorisation ait été accordée**.
+
+> ⚠️ **Conséquence à retenir : ne jamais remettre le vault dans `~/Documents`, `~/Desktop` ou `~/Downloads`.** Le rêve automatique s'arrêterait de fonctionner, et le préflight le dirait par notification — mais le créneau serait perdu.
 
 ## Pourquoi launchd et pas cron
 
@@ -52,7 +56,8 @@ launchctl kickstart -p gui/$(id -u)/com.hectorvolant.secondbrain.dream
 tail -f ~/Library/Logs/second-brain-dream.log
 
 # 3. Ou lancer le wrapper seul, sans passer par launchd
-#    ⚠️ ce chemin-là NE teste PAS le blocage TCC : depuis le Terminal, l'accès est accordé.
+#    ⚠️ ce chemin-là n'exerce PAS le contexte launchd (permissions, PATH, environnement).
+#    Pour un vrai test de bout en bout, passer par kickstart ci-dessus.
 ~/.local/bin/dream-weekly.sh
 ```
 
@@ -90,7 +95,7 @@ rm ~/Library/LaunchAgents/com.hectorvolant.secondbrain.dream.plist ~/.local/bin/
 ```sh
 #!/bin/zsh
 set -u
-VAULT="$HOME/Documents/second-brain"
+VAULT="$HOME/second-brain"
 COMMIT=0
 TIMEOUT=2400
 DATE="$(date +%Y-%m-%d)"
@@ -144,7 +149,7 @@ exit 0
 
 ## Pièges connus
 
-- **TCC / accès au vault** — le blocage principal, traité en haut de ce runbook. Signature : `Operation not permitted` sur `getcwd`.
+- **TCC / accès au vault** — **résolu par l'emplacement**, pas par une permission : le vault vit à `~/second-brain`, hors des dossiers protégés. Signature si le problème revenait (vault redéplacé dans `~/Documents`, `~/Desktop` ou `~/Downloads`) : `Operation not permitted` sur `getcwd`. Le préflight l'attrape et notifie.
 - **Deux rêves le même jour** : le fichier porte la date, donc un second run écraserait le premier. La commande l'interdit — elle **empile** un bloc `## Rêve N (même jour)`, comme les logs empilent leurs sessions. Un rêve déjà arbitré est une trace, pas un brouillon.
 - **`launchctl load` est obsolète** sur macOS récent : utiliser `bootstrap` / `bootout` / `kickstart`.
 - **Notification absente** : vérifier Réglages › Notifications. Le canal a été testé le 31/07 depuis le Terminal **et** depuis launchd (la notification d'échec du préflight est bien partie) — il fonctionne.

@@ -15,7 +15,7 @@ Ce qu'il faut savoir pour faire opérer Codex dans le vault : le sandbox `worksp
 
 ## Points clés
 - **Sandbox `workspace-write`** : lecture partout, écriture + exécution limitées au workspace ; réseau et éditions hors workspace passent par approval (preset recommandée : `--sandbox workspace-write --ask-for-approval on-request`).
-- **`--add-dir <chemin>` = writable roots, écriture uniquement** — ne change rien à la lecture (déjà libre). Écrire dans le vault depuis un autre repo : `codex --sandbox workspace-write --add-dir ~/Documents/second-brain`.
+- **`--add-dir <chemin>` = writable roots, écriture uniquement** — ne change rien à la lecture (déjà libre). Écrire dans le vault depuis un autre repo : `codex --sandbox workspace-write --add-dir ~/second-brain`.
 - **Commandes custom, deux systèmes** : `~/.codex/prompts/*.md` (ancien — invocation `/prompts:nom`, placeholders `$ARGUMENTS`/`$1..$9`, pas de sous-dossiers) vs **skills** (moderne — dossier + `SKILL.md` dans `~/.codex/skills/`, invocation `$nom` ou activation implicite par description, gestion via `skills.config` de `config.toml`).
 - **AGENTS.md** : à chaque niveau Codex prend `AGENTS.override.md` sinon `AGENTS.md` (un seul fichier par répertoire, fichiers vides ignorés), concatène du global vers le cwd — **le plus proche du répertoire courant domine**.
 - **Limite 32 KiB par défaut** (`project_doc_max_bytes`) sur la concaténation : au-delà, troncature ; augmentable dans `config.toml`, noms de repli possibles (`project_doc_fallback_filenames`).

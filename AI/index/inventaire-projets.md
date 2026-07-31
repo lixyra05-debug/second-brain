@@ -18,7 +18,7 @@ cree: 2026-07-12
 | vivo | `~/projects/vivo` | 34 | 2026-07-10 | **actif — en cours de publication** | feature-complete, RevenueCat intégré (`d4bc7d3`) — fiche + pivot rafraîchis le 12/07 ✅ |
 | autonomous | `~/autonomous` | 49 | 2026-05-31 | **actif** (GO 12/07) | SaaS outbound **en prod** : autonomous.coldsend.app — pivot créé, documenté et ajouté à [[contexte-hector]] le 12/07 ✅ |
 | remedes-naturels | `~/projects/remedes-naturels` | 9 | 2026-05-04 | **pause — produit livré, pas de travail actif** | ebooks via Stripe — documenté le 12/07 ✅ |
-| second-brain | `~/Documents/second-brain` | 11 | 2026-07-10 | **actif** | ce vault — auto-documenté ([[_second-brain]]) |
+| second-brain | `~/second-brain` | 11 | 2026-07-10 | **actif** | ce vault — auto-documenté ([[_second-brain]]) |
 | hermes-polymarket | VPS — `~veillebot/.hermes/skills` | 3 (repo skills) | 2026-06-17 (commit) · ops le 12/07 | **actif** | 2 bots paper + cockpit, 14 unités systemd ; revue validation Atlas le 17/07 — documenté le 12/07 ✅ |
 | agent-alternance | VPS — `~veillebot/alternance` | pas de git | 2026-07-12 (offres du matin) | **actif** | pipeline script-only FT/Perplexity, brief 7h45, HITL absolu — documenté le 12/07 ✅ |
 | ads-studio | VPS — `~veillebot/ads-studio` | 0 (git init **sans commit**) | 2026-06-24 (mtime) | **actif** | code trouvé sur le VPS le 12/07, pointé dans le pivot (pas de fiche, GO) ; ⚠️ jamais commité = zéro backup |

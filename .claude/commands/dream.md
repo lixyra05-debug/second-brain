@@ -9,7 +9,7 @@ Le rêve **lit tout le vault et n'y touche pas**. Il produit une note de proposi
 ## Périmètre — inviolable
 
 - **Lecture seule.** Aucune note existante n'est modifiée, déplacée, renommée ni archivée pendant un rêve. Les seuls fichiers écrits sont la note de rêve et le log de session (R4).
-- **Le vault uniquement** — `~/Documents/second-brain`. **Jamais** `~/.claude/projects/`, **jamais** le VPS (aucun `ssh`), **jamais** un autre dossier du Mac, **même en lecture**. Un rêve ne sort pas du vault.
+- **Le vault uniquement** — `~/second-brain`. **Jamais** `~/.claude/projects/`, **jamais** le VPS (aucun `ssh`), **jamais** un autre dossier du Mac, **même en lecture**. Un rêve ne sort pas du vault.
 - **Zéro application automatique** (R3). Le rêve s'arrête à la proposition. L'application se fait ensuite, sur GO d'Hector, section par section — dans une session normale, pas ici.
 - **Zéro réécriture des mots d'Hector** (R2) : le rêve signale une dérive et pointe la source fraîche ; il ne rédige pas le nouveau Statut à sa place.
 
