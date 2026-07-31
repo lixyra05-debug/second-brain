@@ -12,7 +12,7 @@ cree: 2026-07-03
 
 - **Hector Volant, 20 ans, Paris.** BTS NDRC, puis **Ynov Campus — 3e année Bachelor IA, rentrée septembre 2026** (la piste Efrei n'est plus d'actualité).
 - **Recherche active d'une alternance de 12 mois** (agents IA / automatisation) → [[_agent-alternance]].
-- Fondateur de **LYXIRIA** (micro-entreprise). Produits livrés : [[_legitvision]], [[_vivo]], remedes-naturels (vente d'ebooks via Stripe).
+- Fondateur de **LYXIRIA** (micro-entreprise). Produits livrés : [[_legitvision]], remedes-naturels (vente d'ebooks via Stripe) ; [[_vivo]] est feature-complete, en cours de publication.
 - **Style de travail** : hands-on, itératif, voix-vers-texte (messages longs et décousus — c'est normal), résultats concrets > théorie, veut des commandes exactes à copier-coller. Délègue l'implémentation à Claude Code, **garde les décisions stratégiques**. Déteste le fluff et le groveling. Tendance « objet brillant »/scope creep assumée : le recadrer vers le shipping, sans lourdeur.
 - Outillage de tête : Claude = orchestrateur principal, Perplexity = recherche.
 
@@ -23,7 +23,7 @@ cree: 2026-07-03
 - [[_ads-studio]] — usine à créas pub semi-auto (Claude Code + Higgsfield + Meta Ads, orchestrée par Hermes). Aucune exécution ni dépense sans GO d'Hector.
 - [[_autonomous]] — SaaS outbound B2B : une URL d'entreprise → 50 prospects qualifiés + emails personnalisés, en prod sur autonomous.coldsend.app. *(Ajouté le 2026-07-12 — trou découvert par l'inventaire des projets, ajout demandé par Hector.)*
 - [[_legitvision]] — SaaS d'authentification luxe (livré).
-- [[_vivo]] — app scanner nutrition/cosmétique (livrée, 700+ tests).
+- [[_vivo]] — app scanner nutrition/cosmétique (feature-complete, 700+ tests ; **en cours de publication**, bloqueur compte Apple Developer). *(Correction du 2026-07-31, GO d'Hector : « livrée » retiré ici et de la liste des produits livrés ci-dessus — Vivo n'est pas publiée. « livré » n'est pas un statut, cf. `AGENTS.md` §4.)*
 - [[_second-brain]] — ce vault, Claude en architecte & concierge.
 - **En fond** : remedes-naturels (livré), bot automobile (scraping Python/Playwright + alertes Telegram), **Molty/OpenClaw** — agent de veille 24/7 sur le VPS, distinct du cockpit Hermes (ne pas les confondre). *(Correction du 2026-07-12, mission VPS : Molty n'est pas déployé — user `openclaw` vide sur le serveur, seul le workspace local `~/clawd` existe ; la veille réelle qui tourne est `veillebot-weekly` sous Hermes, lundi 7h.)*
 

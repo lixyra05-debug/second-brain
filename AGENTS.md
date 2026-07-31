@@ -85,6 +85,7 @@ Routines : `/dream` tient la revue périodique (relecture + propositions). Reste
 ## 7. Intégrations
 
 - `AI/runbooks/` — les procédures (déploiement, scripts, workflows récurrents) vivent là, une note par procédure.
+- `AI/dreams/` — les rêves de consolidation produits par `/dream` : relecture périodique du vault et propositions datées. L'agent y écrit, il n'applique rien ; Hector arbitre section par section, et l'application se fait dans une session normale.
 - `AI/contexte-hector.md` — contexte vivant : Qui / Projets actifs / Stack / Règles de collaboration. Hector le remplit et le maintient ; l'agent le lit en début de session et **propose** des mises à jour (R2 : jamais d'écrasement).
 
 ## 8. Spécifique Claude Code
