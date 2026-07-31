@@ -11,6 +11,15 @@ cree: 2026-07-03
 Construire le second brain Obsidian d'Hector : structure PARA + journal + espace AI, avec Claude comme architecte & concierge (règles dans [[CLAUDE]]).
 
 ## Statut
+**Au 2026-07-31** *(premier instantané daté de ce pivot — le précédent avait **28 jours** et décrivait un vault qui n'existe plus : le pivot du vault était devenu la note la moins à jour du vault, relevé par les deux rêves)*
+- **Le vault vit désormais à `~/second-brain`**, hors de `~/Documents`. macOS y bloquait launchd par TCC ; déplacer le dossier évitait d'accorder l'accès complet au disque à `/bin/zsh`. Git a voyagé intact (74 fichiers suivis, remote joignable, `.git` sans chemin absolu). **Ne jamais le remettre dans un dossier protégé** (`~/Documents`, `~/Desktop`, `~/Downloads`).
+- **`/dream` v1.5 livré** — la commande de consolidation lit tout le vault, **n'applique rien**, et produit `AI/dreams/YYYY-MM-DD-dream.md` en **six** sections : Digest · **Boucles non fermées** · Statuts périmés · Consolidations · Graines de wiki · Miroir. Deux affinages nés du premier run : un pivot `pause` n'est plus périmé par la seule date, et deux rêves le même jour **s'empilent** au lieu de s'écraser.
+- **Automatisé** — agent launchd `com.hectorvolant.secondbrain.dream`, **dimanche 20 h**, avec rattrapage si le Mac était éteint. Wrapper à préflight, chien de garde 40 min, contrôle de périmètre sur le delta git, et notification macOS à la fin. **Bout en bout validé le 31/07** (`exit 0`, rêve écrit, notification reçue). Runbook : [[dream]]. Premier créneau réel : **dimanche 20 h**.
+- **Phases** : 1, 2 et 6 faites. La **Phase 5 n'est plus un chantier** — §6 acte que `/dream` tient la revue périodique ; restent à définir « revue du jour » et « traite l'inbox ». Ouvertes : **Phase 4** (runbook d'ingestion wiki — `03-Resources/wiki/` toujours vide) et l'extraction des runbooks du doc v4.0, **orpheline** depuis que sa porte (la Phase 5) a été fermée sans reparentage.
+- La constitution compte désormais **R1-R7**, `AI/dreams/` est cité en §2, §7 et §8, et `/grille-moi` **n'a toujours jamais servi** — ce qui gèle son portage en skill Codex.
+
+---
+
 Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage. Prochaines phases : remplissage/capture, puis Phase 3 (migrations éventuelles), Phase 5 (routines).
 
 ## Next actions
@@ -62,3 +71,6 @@ Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage
 ### 2026-07-31
 - **`/dream` v1** créée et **premier rêve** produit ([[2026-07-31-dream]]) : 7 pivots périmés sur 8, 1 capture Inbox à promouvoir, 1 incohérence de vocabulaire, 5 boucles ouvertes chronométrées, 3 graines de wiki, et un miroir (39 notes machine / 0 note écrite de la main d'Hector). Log : `AI/logs/2026-07-31-session.md`.
 - **Arbitrage rendu le jour même** : les 3 changements structurels appliqués (§2, §6, §8 + §4 sur le vocabulaire de statut), Kimi K3 promue, sections vides des pivots rendues visibles, et 2 statuts rafraîchis après reconnaissance VPS lecture seule (agent-alternance : 58 offres dont 45 jamais scorées ; ads-studio : bloqueur crédits levé, 11 générations, 10 commits). Graines de wiki renvoyées en Phase 4.
+- **`/dream` v1.5** : règle `pause` (plus de faux positif sur un projet en pause), section **Boucles non fermées** (le rêve rend des comptes sur ses propres propositions), règle anti-écrasement (deux rêves le même jour s'empilent). **Automatisé** par launchd le dimanche à 20 h, avec préflight, chien de garde et notification macOS.
+- **Vault déplacé en `~/second-brain`** pour contourner TCC sans élargir de permission — 11 références de chemin corrigées dans 9 fichiers, git intact. **Bout en bout du rêve automatique validé** le soir même : `exit 0`, rêve empilé sous « Rêve 2 », notification reçue. Les deux affinages v1.5 se sont vérifiés d'eux-mêmes en conditions réelles.
+- **Constitution : R7 ajoutée** (« un log ne se réécrit jamais ») et leçon sur le moment d'écrire un `## Statut` (en fin de session). Pointeur global `~/.claude/CLAUDE.md` créé, miroir de `~/.codex/AGENTS.md`.

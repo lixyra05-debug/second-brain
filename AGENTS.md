@@ -37,6 +37,7 @@ Détail des dossiers `AI/` :
 - **R4 — Chaque session = un log** dans `AI/logs/YYYY-MM-DD-session.md` : notes lues / modifiées / créées / décisions en attente de GO.
 - **R5 — Atomicité.** 1 idée = 1 note, titre clair, [[liens]] vers les notes voisines, et les mots d'Hector.
 - **R6 — Boucle d'amélioration.** Quand Hector corrige une erreur de l'agent, l'agent propose une mise à jour de AGENTS.md (ou du template concerné) pour ne plus la refaire. Appliquée après GO.
+- **R7 — Un log ne se réécrit jamais.** Les notes de `AI/logs/` sont des **traces datées** : on n'y corrige pas rétroactivement un chemin, un nom ou un chiffre, même devenu faux depuis. Ce qui a changé s'écrit dans la session suivante. *(R1 protège les notes, R2 protège les mots d'Hector, **R7 protège l'histoire**.)*
 
 ## 4. Conventions
 
@@ -56,6 +57,8 @@ source:                           # resources uniquement (URL, livre, cours…)
 ```
 
 `statut` est un **vocabulaire fermé** lui aussi : `actif | pause | termine`. **« livré » n'est pas un statut** — un projet livré mais encore en production, ou en cours de publication, reste `actif` ; `termine` signifie qu'on n'y touche plus. Les notes d'index et d'inventaire *décrivent* un projet, elles n'inventent pas de statut : si une catégorie d'inventaire contredit le frontmatter d'un pivot, c'est l'inventaire qui s'aligne.
+
+**Un `## Statut` s'écrit EN FIN de session, jamais au milieu.** La session qui rédige un statut est très souvent celle qui, dans l'heure qui suit, change les faits qu'il décrit. *(Leçon du 2026-07-31 : l'instantané d'[[_agent-alternance]] était **faux à 0 jour d'âge** — il annonçait un doublon « laissé en `analysee` » que la même journée avait archivé, et un dépôt à 15 fichiers qui en comptait 16.)*
 
 ### Tags — vocabulaire fermé (ne pas en inventer)
 `ia` · `agents` · `trading` · `ads` · `alternance` · `ynov` · `business` · `automation` · `dev` · `finance` · `sante` · `idee`
