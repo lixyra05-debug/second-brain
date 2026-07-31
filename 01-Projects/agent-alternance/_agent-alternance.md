@@ -33,6 +33,7 @@ Au 2026-07-04 : 19 offres ingérées et scorées, **4 candidatures envoyées** �
 - (à remplir)
 
 ## Ressources liées
+- **Code** : VPS `/home/veillebot/alternance` — **backup GitHub privé** : https://github.com/lixyra05-debug/alternance (baseline `319be2f` du 2026-07-31, 15 fichiers). Code et docs seuls : la donnée (`offres.json`/`.csv`, `profil.*`, `candidatures/`, `claude_out/`) et les secrets (`.env`) restent sur le serveur.
 - [[01-Projects/agent-alternance/fiche-technique|fiche-technique]] — pipeline serveur (France Travail, Perplexity, brief 7h45, bilan dimanche), pointeurs VPS
 - [[01-Projects/agent-alternance/decisions-et-lecons|decisions-et-lecons]] — décisions et leçons du déploiement serveur
 
