@@ -93,7 +93,7 @@ Routines : `/dream` tient la revue périodique (relecture + propositions). Reste
 - `CLAUDE.md` = `@AGENTS.md` : cette constitution est chargée automatiquement à chaque session.
 - Commandes projet dans `.claude/commands/` :
   - `/grille-moi <sujet>` — interview de capture, une question à la fois, notes brutes dans `00-Inbox/`.
-  - `/dream` — consolidation de mémoire : lit tout le vault, ne modifie rien, produit `AI/dreams/YYYY-MM-DD-dream.md` (digest, statuts périmés, consolidations, graines de wiki, miroir). Périmètre strict : le vault seul — jamais `~/.claude/projects/`, jamais le VPS, jamais un autre dossier.
+  - `/dream` — consolidation de mémoire : lit tout le vault, ne modifie rien, produit `AI/dreams/YYYY-MM-DD-dream.md` en six sections (digest, boucles non fermées, statuts périmés, consolidations, graines de wiki, miroir). Périmètre strict : le vault seul — jamais `~/.claude/projects/`, jamais le VPS, jamais un autre dossier. **Tourne aussi tout seul le dimanche à 20 h** (launchd) — voir le runbook [[dream]].
 - Réglages locaux à la machine : `.claude/settings.local.json` (ignoré par git, jamais commité).
 
 ## 9. Spécifique Codex
