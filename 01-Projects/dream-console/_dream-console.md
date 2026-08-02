@@ -19,12 +19,11 @@ Une interface de commandement locale du second cerveau : ouvrir une page et voir
 - **Le sixième est en direct** : `hermes-collector`, sonde **lecture seule** déployée sur le VPS (unité **système**, `User=veillebot`), SSE sur `127.0.0.1:8787`, jointe par tunnel SSH. Aucun port public, routeur `GET` uniquement, aucun secret ni contenu de conversation dans le flux.
 - **Ce que la sonde a trouvé en se branchant** : `~/.hermes/state.db` est gelée depuis le 13/07 — **non-usage réel, pas une panne** (0 message entrant au log, 0 erreur SQLite, base tenue ouverte en écriture). Mais le 14/07 le gateway a journalisé « Session expiry done: 1 finalized », écrit `sessions.json` et **jamais `ended_at` en base** : 7 h 47 d'écart entre deux magasins, aucun signal. Capturé dans `00-Inbox/`.
 - **Ce que le panneau ATLAS montre** : depuis le verdict A/B du 17/07, **139 clôtures de plus** — 1,5× l'échantillon sur lequel il a été rendu — pour **−0,55 $**, contre −17,14 $ sur les 92 premières. Le verdict de juillet n'est plus la meilleure information disponible sur Atlas.
-- **Risque non couvert** : `~/dream-viewer` est en git **local sans remote**. Le projet n'a aucun backup hors du Mac.
+- **Sous filet depuis le 2026-08-03** : dépôt **privé** `lixyra05-debug/dream-viewer`, poussé après scan anti-secrets — ni IP, ni hôte, ni URL de tunnel, ni secret, ni chemin absolu du Mac dans les 49 fichiers suivis ; les captures d'écran (`.shots/`) sont ignorées et n'ont jamais été suivies. Deux éléments de contenu du vault retirés du code à cette occasion (une phrase du rêve recopiée en dur, les chiffres du verdict Atlas en repli).
 
 ## Next actions
 
-- [ ] Pousser `~/dream-viewer` sur un dépôt privé — c'est le seul projet actif sans filet.
-- [ ] Trancher le sort de l'exception `ReadWritePaths` du collecteur (mesurée, documentée, réversible en une ligne).
+- [x] ~~Trancher l'exception `ReadWritePaths` du collecteur~~ — **supprimée** le 03/08 : le collecteur recopie `atlas.db` dans son `/tmp` privé et lit la copie. `ReadWritePaths=` est vide, `~/.hermes` est strictement en lecture seule.
 - [ ] Décider si `polymarket.db` (5,9 Go) entre dans le collecteur, et sous quelles requêtes bornées.
 
 ## Décisions
@@ -32,6 +31,8 @@ Une interface de commandement locale du second cerveau : ouvrir une page et voir
 - **2026-08-01 — direction visuelle VERRIÈRE**, arbitrée entre quatre propositions jugées sur trois axes, avec la loi typographique d'ÉPHÉMÉRIDE greffée.
 - **2026-08-02 — unité systemd SYSTÈME et non `--user`**, sur preuve : en `--user`, ni `ProtectHome` ni `IPAddressDeny` ne s'appliquent sur cet hôte. Consigne initiale corrigée par le test.
 - **2026-08-02 — `polymarket.db` (5,9 Go) et `bot3.db` (1,7 Go) hors périmètre** du collecteur tant que les agrégats ne sont pas vérifiés sur index.
+- **2026-08-03 — dépôt privé GitHub** après scan anti-secrets. Le code ne doit embarquer ni contenu du vault ni URL de tunnel : deux éléments retirés à cette occasion.
+- **2026-08-03 — l'exception `ReadWritePaths` est supprimée, pas déplacée.** Recopie dans le `/tmp` privé du service (`PrivateTmp`) plutôt qu'une ouverture en écriture de `~/.hermes`.
 
 ## Ressources liées
 
@@ -45,3 +46,6 @@ Une interface de commandement locale du second cerveau : ouvrir une page et voir
 
 ### 2026-08-02
 - Collecteur Hermes déployé sur le VPS en lecture seule, module HERMES puis panneau ATLAS (lots 4 à 7). Import du projet dans le vault via [[documenter-un-projet]] — **aucune modification du dépôt `~/dream-viewer` pendant l'import**. Log : `AI/logs/2026-08-02-session.md`.
+
+### 2026-08-03
+- Mise sous filet (dépôt privé, scan anti-secrets), suppression de l'exception `ReadWritePaths` du collecteur, **jauge disque avec projection de saturation** ajoutée au panneau HERMES. Log : `AI/logs/2026-08-03-session.md`.
