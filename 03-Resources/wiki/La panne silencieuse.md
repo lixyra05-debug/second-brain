@@ -6,7 +6,7 @@ cree: 2026-08-03
 
 # La panne silencieuse — quand le vert ne veut rien dire
 
-> **(proposition Claude — à valider)** · Première page de `03-Resources/wiki/`, ouverture de la Phase 4. Écrite le 2026-08-03 sur GO d'Hector, à partir de la graine des rêves des 31/07 et 02/08. Hector relit avant validation.
+> Première page de `03-Resources/wiki/`, ouverture de la Phase 4. Écrite le 2026-08-03 à partir de la graine des rêves des 31/07 et 02/08, **relue et validée par Hector le 2026-08-03**.
 
 Une panne bruyante se répare. Une panne silencieuse s'installe.
 

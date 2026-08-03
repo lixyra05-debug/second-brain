@@ -26,7 +26,7 @@ Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage
 - [x] Hector valide [[contexte-hector]] (fait le 2026-07-04, sans correction)
 - [x] Hector valide les Objectifs/Statuts des 5 autres notes pivot (fait le 2026-07-04)
 - [x] Hector configure le plugin core « Templates » d'Obsidian (dossier : `Templates/`) — fait, constaté dans `.obsidian/templates.json` le 2026-07-12 (daily notes câblées aussi : `05-Journal` + `tpl-daily`)
-- [ ] Phase 4 : runbook ingestion wiki (tri inbox du 2026-07-10). **Ouverte le 2026-08-03 avec UNE page** : [[La panne silencieuse]] *(proposition Claude, en attente de validation d'Hector)*. **Backlog consolidé — 6 graines proposées par les 3 rêves, aucune écrite** :
+- [ ] Phase 4 : runbook ingestion wiki (tri inbox du 2026-07-10). **Ouverte le 2026-08-03 avec UNE page** : [[La panne silencieuse]] *(relue et validée par Hector le 2026-08-03)*. **Backlog consolidé — 6 graines proposées par les 3 rêves, aucune écrite** :
   - « **Garde-fous des agents autonomes** » — sources : [[contexte-hector]] (incident Curator) + les `decisions-et-lecons` de hermes-polymarket, agent-alternance et autonomous + [[_ads-studio]]. Les mêmes 5 règles reviennent dans 4 projets indépendants.
   - « **Anatomie du VPS Hetzner** » — sources : les 3 fiches techniques VPS (hermes, alternance, autonomous) + [[_ads-studio]] + [[inventaire-projets]]. Un seul serveur, 4 projets, 19 timers ; la carte n'existe nulle part.
   - « **Le vault comme mémoire partagée entre agents** » — sources : `AGENTS.md` §8-§9 + [[codex-cli-reference]] + [[MCP 2026-07-28 — cœur stateless]] + [[OpenWorker — agent open-source model-independent]].
