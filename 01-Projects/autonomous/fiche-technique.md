@@ -42,6 +42,22 @@ La doc opérateur vit dans `docs/` (~30 fichiers, dont un playbook self-hosted d
 - **VPS** : Trigger.dev self-hosted + Scrapling (trigger. / scrapling.coldsend.app) — playbook : `docs/trigger-dev-self-hosted-playbook.md`
 - **Dans le repo** : `CLAUDE.md` (la doc de référence, sprint par sprint), `docs/`, `supabase/migrations/`, `trigger/` (les tâches)
 
+## Trigger.dev — `trigger-electric-1` arrêté le 2026-08-03
+
+**Arrêté volontairement**, pas supprimé. Diagnostic : `FATAL 28P01 (invalid_password)` — le service ne s'est **jamais** connecté à Postgres depuis son installation le 13/05, soit **7 488 redémarrages**. Autonomous est passé en production et a tourné tout l'été sans lui.
+
+Preuves qu'il n'était requis par personne : `webapp.depends_on` ne le cite pas · **0 mention d'electric dans 24 h de journaux du webapp** · 10 150 runners tous en `Exited (0)` · webapp `healthy` depuis 2 mois.
+
+Ce qu'il porterait s'il fonctionnait : l'API **Realtime** de Trigger.dev (`subscribeToRun`, rafraîchissement live du tableau de bord). Jamais disponible ici, donc jamais utilisée. Le réparer aurait été garder un service dont personne n'a jamais utilisé la fonction ; si le besoin apparaît, la réparation se fera **en connaissance de cause**.
+
+**Réactivation, une ligne :**
+
+```bash
+ssh root@<vps> 'docker update --restart=unless-stopped trigger-electric-1 && docker start trigger-electric-1'
+```
+
+⚠️ Il redémarrera **en boucle** tant que son `DATABASE_URL` portera le mot de passe par défaut du compose : le corriger dans `/opt/trigger/hosting/docker/webapp/.env` **avant** de le relancer, sinon on retrouve 53 redémarrages par heure.
+
 ## Liens
 - [[_autonomous]]
 - [[01-Projects/autonomous/decisions-et-lecons|decisions-et-lecons]]
