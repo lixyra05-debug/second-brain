@@ -20,6 +20,7 @@ Au 2026-07-12 : **premier run Trigger.dev SUCCESS en prod confirmé**, après un
 - [ ] Clarification SIRET/SEPA (pour encaisser)
 
 ## Décisions
+- **2026-08-03 — Clarification SIRET/SEPA : REPORTÉE AU 2026-09-15.** Décision d'Hector, datée et assumée — **pas un oubli**. Motif : la rentrée Ynov (septembre 2026) est prioritaire, et l'encaissement n'est pas bloquant avant cette date. La boucle est **fermée jusqu'au 15/09** ; elle doit ressortir à partir de là, et elle reste la seule du vault qui conditionne un encaissement réel.
 - 2026-07-12 — Projet entré au vault suite à [[inventaire-projets]] : il n'avait ni pivot ni mention dans [[contexte-hector]] (corrigé le même jour).
 
 ## Ressources liées

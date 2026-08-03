@@ -25,10 +25,14 @@ Système de trading autonome sur Polymarket, 24/7 sur le VPS Hetzner : la décis
 Au 2026-07-04 : **3 GO en attente** — config A/B Flipadelphia + Kickstand7 (25 $ chacun, remplace Sharkbets), fix de la persistance recency du finder, sanity-check des timestamps de verdicts API. Formule d'edge du Bot 1 corrigée (Σbid − 1). Bot 3 toujours gaté.
 
 ## Next actions
-- [ ] **Arbitrage Atlas keep / adjust / stop** — verdict du 2026-07-17, toujours en attente ; le non-choix vaut « keep » et le bot continue en paper. **Procédure de pause préparée le 2026-08-03, non exécutée** : [[01-Projects/hermes-polymarket/mise-en-pause-atlas-procedure|mise-en-pause-atlas-procedure]] — 3 granularités, commandes réversibles, aucune donnée touchée
+- [x] ~~Arbitrage Atlas keep / adjust / stop~~ — **TRANCHÉ le 2026-08-03 : KEEP.** Voir Décisions. La boucle est fermée ; elle ne doit plus être comptée « sans réponse ».
+- [ ] **Réexamen d'Atlas au 2026-09-30** (post-rentrée) — point de revue posé avec la décision de keep
 - [ ] **Bot 3** : la gate d'exécution reste fermée — collecteur record-only, zéro trade
 
 ## Décisions
+- **2026-08-03 — ATLAS : KEEP DÉCIDÉ.** Décision d'Hector, **pas un report** : la boucle ouverte depuis le verdict du 17/07 est fermée. **Aucune unité n'est arrêtée** — `atlas`, `copy-tracker`, `atlas-report` et le one-shot `atlas-validation-review` restent `enabled`/`active`, la collecte continue d'accumuler de la matière. Les trois granularités de pause préparées le 03/08 ([[01-Projects/hermes-polymarket/mise-en-pause-atlas-procedure|mise-en-pause-atlas-procedure]]) **restent non exécutées**.
+  **Motif : coût nul.** Aucune clé privée n'existe sur le serveur (vérifié le 03/08), tout est en `paper` : l'exposition financière est nulle quoi qu'il arrive. *(Précision au motif énoncé : il reste **10 positions ouvertes pour 25,00 USDC en paper**, la plus ancienne depuis le 11/07 — et non zéro. Le fait est corrigé, la conclusion tient : en paper et sans clé, 10 positions ouvertes ne coûtent pas davantage que zéro.)*
+  **Ce keep n'est PAS une réhabilitation.** La thèse du copy-trading reste **invalidée par le verdict du 17/07** ; c'est un maintien sans enjeu, pas un feu vert. Point de revue : **réexamen au 2026-09-30**, post-rentrée.
 - 2026-07-04 — **Formule d'edge du Bot 1 corrigée** (Σbid − 1).
 - 2026-07-17 — **La fenêtre A/B v2 est close par un one-shot programmé d'avance** (`atlas-validation-review`) qui produit des chiffres et ne juge pas : l'arbitrage reste humain.
 - 2026-07-30 — **Bot 3 passe à un collecteur record-only** : repo git dédié, heartbeat minute vers healthchecks.io, gate d'exécution fermée, **zéro trade**.

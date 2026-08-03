@@ -14,9 +14,10 @@ App mobile (React Native / Expo) de scan nutrition + cosmétique : barcode + OCR
 Au 2026-07-12 : **feature-complete, RevenueCat fait** (achats Premium/Expert + restore, `d4bc7d3` du 10/07). **Bloqueur restant : compte Apple Developer** → EAS/TestFlight → screenshots → soumission.
 
 ## Next actions
-- [ ] **Compte Apple Developer** → EAS/TestFlight → screenshots → soumission. Bloqueur unique depuis le 2026-07-12 : une app feature-complete à 700+ tests attend une inscription administrative.
+- [x] ~~Compte Apple Developer → EAS/TestFlight → screenshots → soumission~~ — **reporté sans date le 2026-08-03**, décision assumée. Voir Décisions. L'app reste feature-complete à 700+ tests, non publiée.
 
 ## Décisions
+- **2026-08-03 — Compte Apple Developer : REPORTÉ SANS DATE.** Décision assumée d'Hector : l'app reste **feature-complete et non publiée**. Le pivot garde `statut: actif` — « en cours de publication » décrit toujours l'intention, pas un chantier en cours. **À traiter comme ÉCARTÉE, pas comme « sans réponse »** : c'est un choix explicite, au même titre que la `pause` de [[_remedes-naturels]], et une date qui vieillit n'en fait pas une dérive.
 - 2026-07-10 — **RevenueCat intégré** (`d4bc7d3`) : achats Premium/Expert et restore.
 - 2026-07-31 — **« livrée » retiré** : Vivo n'est pas publiée, elle est **en cours de publication**. Correction actée par Hector, propagée à [[contexte-hector]] et [[inventaire-projets]].
 
