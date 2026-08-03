@@ -25,7 +25,7 @@ Système de trading autonome sur Polymarket, 24/7 sur le VPS Hetzner : la décis
 Au 2026-07-04 : **3 GO en attente** — config A/B Flipadelphia + Kickstand7 (25 $ chacun, remplace Sharkbets), fix de la persistance recency du finder, sanity-check des timestamps de verdicts API. Formule d'edge du Bot 1 corrigée (Σbid − 1). Bot 3 toujours gaté.
 
 ## Next actions
-- [ ] **Arbitrage Atlas keep / adjust / stop** — verdict du 2026-07-17, toujours en attente ; le non-choix vaut « keep » et le bot continue en paper
+- [ ] **Arbitrage Atlas keep / adjust / stop** — verdict du 2026-07-17, toujours en attente ; le non-choix vaut « keep » et le bot continue en paper. **Procédure de pause préparée le 2026-08-03, non exécutée** : [[01-Projects/hermes-polymarket/mise-en-pause-atlas-procedure|mise-en-pause-atlas-procedure]] — 3 granularités, commandes réversibles, aucune donnée touchée
 - [ ] **Bot 3** : la gate d'exécution reste fermée — collecteur record-only, zéro trade
 
 ## Décisions
@@ -35,6 +35,7 @@ Au 2026-07-04 : **3 GO en attente** — config A/B Flipadelphia + Kickstand7 (25
 - 2026-08-02 — **Une sonde externe en lecture seule** (`hermes-collector`, [[_dream-console]]) lit Hermes sans jamais y écrire ; elle a relevé le gel de `state.db` depuis le 13/07 et le défaut de finalisation du 14/07.
 
 ## Ressources liées
+- [[01-Projects/hermes-polymarket/mise-en-pause-atlas-procedure|mise-en-pause-atlas-procedure]] — préparée le 03/08, **non exécutée** : Hector arbitre A/B/C
 - [[01-Projects/hermes-polymarket/fiche-technique|fiche-technique]] — bots, cadences systemd, cockpit, pointeurs VPS
 - [[01-Projects/hermes-polymarket/decisions-et-lecons|decisions-et-lecons]] — décisions d'architecture et leçons durcies
 - **Satellite** : Trading-Bots-Vault — vault Obsidian séparé des bots (`~/Downloads/Trading-Bots-Vault` sur le Mac ; décision du 03/07 : import éventuel en Phase 3)
