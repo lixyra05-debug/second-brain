@@ -33,8 +33,12 @@ Phase 1 terminée le 2026-07-03 : structure, CLAUDE.md, templates, guide d'usage
 - [x] Phase 6 : AGENTS.md miroir Hermes/Codex (tri inbox du 2026-07-10) — fait le 2026-07-12 : AGENTS.md = constitution, CLAUDE.md = `@AGENTS.md`, import vérifié sur session fraîche
 - [x] Documenter hermes-polymarket + agent-alternance, et localiser bot-automobile / molty-openclaw / code ads-studio (repos VPS, ssh lecture seule — session dédiée ; fiches selon trouvaille) — fait le 2026-07-12 (fiches créées ; bot-automobile introuvable ; molty non déployé ; ads-studio localisé puis backupé)
 - [ ] Porter /grille-moi en skill Codex ($grille-moi) — gaté derrière la première utilisation réelle côté Claude Code
+- [x] ~~Extraction des runbooks du doc v4.0~~ — **ÉCARTÉE définitivement le 2026-08-03** (boucle de 29 jours fermée)
 
 ## Décisions
+- 2026-08-03 — **Extraction des runbooks du doc v4.0 : ÉCARTÉE définitivement.** Le vault documente désormais mieux que le doc — 4 runbooks écrits depuis le réel ([[documenter-un-projet]], [[dream]], [[veille-a-la-demande]], [[vps-git-et-deploiement]]) contre un document figé de juin. **Si un runbook manque un jour, il s'écrira depuis le réel**, pas depuis une archive. Boucle ouverte depuis le 04/07, soit 29 jours, fermée par un non.
+- 2026-08-03 — **`02-Areas/` s'amorce par l'usage humain** (AGENTS.md §2) : vide n'est pas un défaut structurel tant que la capture n'a pas démarré. Le Miroir continue de le mesurer.
+- 2026-08-03 — **Phase 4 ouverte sur UNE page** : [[La panne silencieuse]] écrite en proposition à valider. Les 7 autres graines restent au backlog ci-dessus — six dormaient déjà pour zéro page créée, on n'en ouvre pas huit d'un coup.
 - 2026-07-03 — Trading-Bots-Vault reste un vault séparé ; import éventuel en Phase 3.
 - 2026-07-03 — 6 projets confirmés · `05-Journal/` séparé · wiki dans `03-Resources/wiki/`.
 - 2026-07-03 — Chaque phase se termine par un commit git.

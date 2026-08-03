@@ -29,6 +29,8 @@ Détail des dossiers `AI/` :
 - `AI/dreams/` — rêves de consolidation (`YYYY-MM-DD-dream.md`), un par run de `/dream` : relecture du vault et propositions. Le rêve ne modifie rien — Hector arbitre section par section.
 - `AI/contexte-hector.md` — contexte vivant sur Hector, lu en début de session.
 
+**`02-Areas/` s'amorce par l'usage humain** — vide n'est pas un défaut structurel tant que la capture n'a pas démarré. Le Miroir continue de le mesurer, sans en faire un reproche. *(Acté le 2026-08-03, arbitrage du rêve du 02/08.)*
+
 ## 3. Règles inviolables
 
 - **R1 — Zéro suppression.** Tout nettoyage = déplacement vers `04-Archive/`. Aucune note ni dossier n'est jamais supprimé.

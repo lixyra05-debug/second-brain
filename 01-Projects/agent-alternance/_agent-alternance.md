@@ -39,9 +39,12 @@ Au 2026-07-04 : 19 offres ingérées et scorées, **4 candidatures envoyées** �
 - [ ] Les **2 offres sans employeur nommé** (scores 73 et 68) — non candidatables en l'état
 - [ ] Les **7 fiches « à vérifier »** de [[01-Projects/agent-alternance/cibles-directes|cibles-directes]]
 - [ ] **Twitter/X à rebalayer** quand `search` refonctionnera — le canal où les fondateurs annoncent leurs recrutements
+- [ ] **Évaluer le rendement de la requête `data`** vers le 2026-08-17 (remplace `automatisation` depuis le 03/08)
 - [ ] **Prouver la dédup secondaire en production** : le critère est posé (une ligne `[dedup2]` au journal), il attend un run qui collecte un doublon réel
 
 ## Décisions
+- 2026-08-03 — **Le scoring reste MANUEL, par design. Question fermée après 8 occurrences.** Zéro token dans les crons, HITL absolu — c'est une propriété du pipeline, pas une dette. **Contrepartie déployée** : le brief de 07 h 45 compte les offres restées en statut `nouvelle` et **rompt le silence** si le stock repart. Il vaut 0 au 03/08 ; sans lui, le brief sortait vert sans rien voir de neuf, comme du 09/07 au 31/07.
+- 2026-08-03 — **Requête France Travail : « automatisation » → « data ».** 2 offres en 19 jours pour un tiers du budget de requêtes. Rendement de « data » à évaluer vers le **2026-08-17** ; remettre « automatisation » s'il est pire.
 - 2026-07-09 — **Précédent Alegria** : une alternance adossée au diplôme de l'école qui la propose vaut `filtre_dur: ECHEC`. C'est ce filtre qui écarte les ~20 entonnoirs d'école du lot.
 - 2026-07-31 — **Le scoring n'a jamais été automatisé, par design** : aucune unité systemd de scoring, aucun script, toutes les occurrences de `score` dans le code sont en lecture. `alternance_setup.md` l'assume dans une section « volontairement HORS de cette livraison ».
 - 2026-07-31 — **`scoring.json` extrait de `profil.json`** : poids, bandes et nature des filtres deviennent une config **générique et versionnée**, surchargée par `profil.json > scoring` qui reste hors dépôt. Le dépôt est reconstructible sans jamais contenir de PII.
