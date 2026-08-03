@@ -25,10 +25,15 @@ Usine à créas publicitaires **semi-automatisée** : Claude Code + Higgsfield p
 Au 2026-07-04 : première commande brief exécutée avec succès. **Bloqueur : recharge des crédits Higgsfield** (4.31 restants ; pack 500 crédits / 26 $ recommandé) avant le premier run créatif complet. Meta Ads ne sera câblé qu'après validation des étapes de génération.
 
 ## Next actions
-- [ ] (à remplir)
+- [x] Premier tir du timer `ads-digest` — **confirmé** : 2026-07-31 05:00 UTC, digest envoyé (850 c.), exit 0 ; puis tous les jours, vérifié le 2026-08-03 au journal
+- [ ] Décider si Meta Ads sort du mode coupé — aucune diffusion, aucune dépense à ce jour
+- [ ] Revérifier le solde Higgsfield : le plan illimité couvre `seedance_2_0`, jamais `marketing_studio_video`
 
 ## Décisions
-- (à remplir)
+- 2026-07-28 — **R7 dans le `CLAUDE.md` du repo** : « les tests n'écrivent JAMAIS dans la base de prod ». Née d'un incident réel — un test de sandbox lancé contre la vraie base a inséré une ligne dans `runs`, qui est append-only (R5) ; les 2 lignes de test ont été purgées.
+- 2026-07-28 — **Timer `ads-digest`** : digest quotidien Telegram **en lecture seule**, `OnCalendar=07:00 Europe/Paris`, `Persistent=true`.
+- 2026-07-30 — **Brand Brain LegitVision** : positionnement « outil d'aide, pas autorité de certification », formulations autorisées et interdites sans exception, et la règle visuelle « nommer les marques : OUI · générer des produits de marque en IA : NON ».
+- 2026-07-30 — **Meta Ads reste coupé** : `meta.write_enabled: false`, `default_status: PAUSED`, plafonds 150 crédits et 30 créas par run, `preflight_cost` obligatoire.
 
 ## Ressources liées
 - **Code** : VPS `/home/veillebot/ads-studio` — CLAUDE.md persona (« tu PROPOSES, Hector VALIDE ») + `brand/`, `briefs/`, `prompts/`, `ops/`, `reports/`, `advertising-masterclass.md`. **Backup GitHub privé** : https://github.com/lixyra05-debug/ads-studio (baseline du 2026-07-12).

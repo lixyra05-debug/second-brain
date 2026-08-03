@@ -26,5 +26,6 @@ source: VPS openclaw (ssh, lecture seule 2026-07-12) — /home/veillebot/.hermes
 
 ## Liens
 - [[_hermes-polymarket]]
+- [[01-Projects/hermes-polymarket/Hermes finalise une session sans l'écrire en base|Hermes finalise une session sans l'écrire en base]] — défaut de finalisation relevé le 2026-08-02 : `sessions.json` écrit, `ended_at` jamais posé en base, 7 h 47 d'écart entre les deux magasins
 - [[01-Projects/hermes-polymarket/fiche-technique|fiche-technique]]
 - [[contexte-hector]] — incident Curator + règles agents autonomes (la référence)

@@ -30,9 +30,9 @@ cree: 2026-07-03
 ## Stack
 
 - **Frontend** : Next.js 14–16 (App Router, TypeScript), React Native / Expo SDK 54, Tailwind + shadcn/ui (web), Framer Motion / Reanimated (animations).
-- **Backend** : Supabase (Auth, PostgreSQL, RLS, Edge Functions Deno, Realtime), Stripe (checkout, webhooks, abonnements), RevenueCat (IAP mobile, à configurer).
+- **Backend** : Supabase (Auth, PostgreSQL, RLS, Edge Functions Deno, Realtime), Stripe (checkout, webhooks, abonnements), RevenueCat (IAP mobile) — **intégré le 2026-07-10** (`d4bc7d3`, achats Premium/Expert + restore) *(correction du 2026-08-03 : « à configurer » était périmé)*.
 - **IA & agents** : Claude Code (l'« ouvrier » principal — prompts XML structurés obligatoires pour le code), Claude Vision API (OCR étiquettes, scoring, analyse d'images), Hermes Agent (Kimi-K2.5 via OpenRouter) en cockpit lecture seule, OpenClaw/Molty (veille), n8n (workflows cloud).
-- **Infra** : Vercel (web, déploiement auto GitHub), EAS Build (mobile), VPS Hetzner Ubuntu 24.04 (`openclaw`) + systemd services/timers, pnpm (web) / npm (mobile Expo — `npx expo install`, jamais `npm install`).
+- **Infra** : Vercel (web, déploiement auto GitHub), EAS Build (mobile), VPS Hetzner Ubuntu 24.04 — **hostname** `openclaw`, mais **tout tourne sous l'utilisateur `veillebot`** ; l'utilisateur `openclaw` est vide *(correction du 2026-08-03, constat de la mission VPS du 12/07)* + systemd services/timers, pnpm (web) / npm (mobile Expo — `npx expo install`, jamais `npm install`).
 - **Data & automatisation** : Python + Playwright (scraping multi-sources), SQLite append-only (DBs des bots), Wikidata SPARQL (traçage de propriété des marques).
 
 ## Règles de collaboration

@@ -119,7 +119,7 @@ cd "$VAULT" 2>/dev/null || { notify "Rêve — échec" "Vault introuvable."; exi
 
 # Preflight TCC : sans lui, claude demarre et reste pendu.
 if ! git -C "$VAULT" status --porcelain >/dev/null 2>&1; then
-  notify "Rêve — accès refusé" "launchd ne peut pas lire le vault. Accorder l'accès complet au disque à /bin/zsh."
+  notify "Rêve — accès refusé" "launchd ne peut pas lire le vault. Vérifier que le vault est bien à ~/second-brain (hors ~/Documents, ~/Desktop, ~/Downloads)."
   exit 1
 fi
 

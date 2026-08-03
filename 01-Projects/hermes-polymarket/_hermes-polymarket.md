@@ -25,10 +25,14 @@ Système de trading autonome sur Polymarket, 24/7 sur le VPS Hetzner : la décis
 Au 2026-07-04 : **3 GO en attente** — config A/B Flipadelphia + Kickstand7 (25 $ chacun, remplace Sharkbets), fix de la persistance recency du finder, sanity-check des timestamps de verdicts API. Formule d'edge du Bot 1 corrigée (Σbid − 1). Bot 3 toujours gaté.
 
 ## Next actions
-- [ ] (à remplir)
+- [ ] **Arbitrage Atlas keep / adjust / stop** — verdict du 2026-07-17, toujours en attente ; le non-choix vaut « keep » et le bot continue en paper
+- [ ] **Bot 3** : la gate d'exécution reste fermée — collecteur record-only, zéro trade
 
 ## Décisions
-- (à remplir)
+- 2026-07-04 — **Formule d'edge du Bot 1 corrigée** (Σbid − 1).
+- 2026-07-17 — **La fenêtre A/B v2 est close par un one-shot programmé d'avance** (`atlas-validation-review`) qui produit des chiffres et ne juge pas : l'arbitrage reste humain.
+- 2026-07-30 — **Bot 3 passe à un collecteur record-only** : repo git dédié, heartbeat minute vers healthchecks.io, gate d'exécution fermée, **zéro trade**.
+- 2026-08-02 — **Une sonde externe en lecture seule** (`hermes-collector`, [[_dream-console]]) lit Hermes sans jamais y écrire ; elle a relevé le gel de `state.db` depuis le 13/07 et le défaut de finalisation du 14/07.
 
 ## Ressources liées
 - [[01-Projects/hermes-polymarket/fiche-technique|fiche-technique]] — bots, cadences systemd, cockpit, pointeurs VPS

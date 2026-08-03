@@ -14,10 +14,11 @@ SaaS d'authentification d'articles de luxe par vision : Claude Vision API analys
 Au 2026-07-04 : **en production**, tiers payants actifs — legitvision.vercel.app.
 
 ## Next actions
-- [ ] (à remplir)
+- [ ] **Revérifier l'instantané du 2026-07-04** — jamais revérifié depuis sa validation. Signal indirect du 30/07 : ads-studio a produit un `brand/brand-brain.md` LegitVision et 11 vidéos sur ce produit, donc la marque bouge pendant que son pivot l'ignore.
 
 ## Décisions
-- (à remplir)
+- 2026-07-10 — **Import pilote via [[documenter-un-projet]]** : fiche technique + décisions/leçons distillées du repo local en lecture seule, **pointeurs plutôt que copies**. C'est ce pilote qui a validé le runbook.
+- 2026-07-31 — **« livré » n'est pas un statut** (AGENTS.md §4) : LegitVision reste `actif`, en production avec des tiers payants. Correction actée par Hector, propagée à [[inventaire-projets]] et [[contexte-hector]].
 
 ## Ressources liées
 - [[01-Projects/legitvision/fiche-technique|fiche-technique]] — stack, architecture, features, état de prod, pointeurs (repo, GitHub, prod)

@@ -36,13 +36,20 @@ Décrocher une **alternance de 12 mois** en agents IA / automatisation pour la r
 Au 2026-07-04 : 19 offres ingérées et scorées, **4 candidatures envoyées** — Vista IA (91/100), Docaposte (86), Nextories (80), Citeo (68, à finaliser sur leur site). Lead Mediawan en attente ; **relance de Muriel Caillet (Ynov) prioritaire**. CV et LM v3 (posture apprentissage) validés.
 
 ## Next actions
-- [ ] (à remplir)
+- [ ] Les **2 offres sans employeur nommé** (scores 73 et 68) — non candidatables en l'état
+- [ ] Les **7 fiches « à vérifier »** de [[01-Projects/agent-alternance/cibles-directes|cibles-directes]]
+- [ ] **Twitter/X à rebalayer** quand `search` refonctionnera — le canal où les fondateurs annoncent leurs recrutements
+- [ ] **Prouver la dédup secondaire en production** : le critère est posé (une ligne `[dedup2]` au journal), il attend un run qui collecte un doublon réel
 
 ## Décisions
-- (à remplir)
+- 2026-07-09 — **Précédent Alegria** : une alternance adossée au diplôme de l'école qui la propose vaut `filtre_dur: ECHEC`. C'est ce filtre qui écarte les ~20 entonnoirs d'école du lot.
+- 2026-07-31 — **Le scoring n'a jamais été automatisé, par design** : aucune unité systemd de scoring, aucun script, toutes les occurrences de `score` dans le code sont en lecture. `alternance_setup.md` l'assume dans une section « volontairement HORS de cette livraison ».
+- 2026-07-31 — **`scoring.json` extrait de `profil.json`** : poids, bandes et nature des filtres deviennent une config **générique et versionnée**, surchargée par `profil.json > scoring` qui reste hors dépôt. Le dépôt est reconstructible sans jamais contenir de PII.
+- 2026-07-31 — **Dédup secondaire déployée** : clé `(entreprise, titre)` normalisés **en plus** de l'URL, pour rattraper les republications France Travail sous un nouvel id. Validée sur les 5 doublons connus, 21 assertions, 0 faux positif.
+- 2026-07-31 — **Le dépôt passe sous git et part en backup GitHub privé.** Le code seul y figure : ni `.env`, ni `offres.*`, ni `profil.*`, ni `candidatures/`.
 
 ## Ressources liées
-- **Code** : VPS `/home/veillebot/alternance` — **backup GitHub privé** : https://github.com/lixyra05-debug/alternance (baseline `319be2f` du 2026-07-31, 15 fichiers). Code et docs seuls : la donnée (`offres.json`/`.csv`, `profil.*`, `candidatures/`, `claude_out/`) et les secrets (`.env`) restent sur le serveur.
+- **Code** : VPS `/home/veillebot/alternance` — **backup GitHub privé** : https://github.com/lixyra05-debug/alternance (HEAD `d90b5d4` au 2026-08-03, **16 fichiers suivis** — la baseline `319be2f` du 31/07 en comptait 15, les sessions suivantes du même jour ont porté le dépôt à 16 ; vérifié sur le serveur). Code et docs seuls : la donnée (`offres.json`/`.csv`, `profil.*`, `candidatures/`, `claude_out/`) et les secrets (`.env`) restent sur le serveur.
 - [[01-Projects/agent-alternance/fiche-technique|fiche-technique]] — pipeline serveur (France Travail, Perplexity, brief 7h45, bilan dimanche), pointeurs VPS
 - [[01-Projects/agent-alternance/decisions-et-lecons|decisions-et-lecons]] — décisions et leçons du déploiement serveur
 - [[01-Projects/agent-alternance/cibles-directes|cibles-directes]] — 20 entreprises IDF où un fondateur lit lui-même les candidatures (hors ATS, hors job boards) — 2026-07-31

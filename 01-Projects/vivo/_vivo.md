@@ -14,10 +14,11 @@ App mobile (React Native / Expo) de scan nutrition + cosmétique : barcode + OCR
 Au 2026-07-12 : **feature-complete, RevenueCat fait** (achats Premium/Expert + restore, `d4bc7d3` du 10/07). **Bloqueur restant : compte Apple Developer** → EAS/TestFlight → screenshots → soumission.
 
 ## Next actions
-- [ ] (à remplir)
+- [ ] **Compte Apple Developer** → EAS/TestFlight → screenshots → soumission. Bloqueur unique depuis le 2026-07-12 : une app feature-complete à 700+ tests attend une inscription administrative.
 
 ## Décisions
-- (à remplir)
+- 2026-07-10 — **RevenueCat intégré** (`d4bc7d3`) : achats Premium/Expert et restore.
+- 2026-07-31 — **« livrée » retiré** : Vivo n'est pas publiée, elle est **en cours de publication**. Correction actée par Hector, propagée à [[contexte-hector]] et [[inventaire-projets]].
 
 ## Ressources liées
 - [[01-Projects/vivo/fiche-technique|fiche-technique]] — stack, architecture, features, état (feature-complete, 723 tests verts), pointeurs

@@ -18,10 +18,10 @@ cree: 2026-07-12
 | vivo | `~/projects/vivo` | 34 | 2026-07-10 | **actif — en cours de publication** | feature-complete, RevenueCat intégré (`d4bc7d3`) — fiche + pivot rafraîchis le 12/07 ✅ |
 | autonomous | `~/autonomous` | 49 | 2026-05-31 | **actif** (GO 12/07) | SaaS outbound **en prod** : autonomous.coldsend.app — pivot créé, documenté et ajouté à [[contexte-hector]] le 12/07 ✅ |
 | remedes-naturels | `~/projects/remedes-naturels` | 9 | 2026-05-04 | **pause — produit livré, pas de travail actif** | ebooks via Stripe — documenté le 12/07 ✅ |
-| second-brain | `~/second-brain` | 11 | 2026-07-10 | **actif** | ce vault — auto-documenté ([[_second-brain]]) |
+| second-brain | `~/second-brain` | 45 | 2026-08-03 | **actif** | ce vault — auto-documenté ([[_second-brain]]) ; *corrigé le 03/08 : 11 commits au 12/07 → 45* |
 | hermes-polymarket | VPS — `~veillebot/.hermes/skills` | 3 (repo skills) | 2026-06-17 (commit) · ops le 12/07 | **actif** | 2 bots paper + cockpit, 14 unités systemd ; revue validation Atlas le 17/07 — documenté le 12/07 ✅ |
-| agent-alternance | VPS — `~veillebot/alternance` | pas de git | 2026-07-12 (offres du matin) | **actif** | pipeline script-only FT/Perplexity, brief 7h45, HITL absolu — documenté le 12/07 ✅ |
-| ads-studio | VPS — `~veillebot/ads-studio` | 0 (git init **sans commit**) | 2026-06-24 (mtime) | **actif** | code trouvé sur le VPS le 12/07, pointé dans le pivot (pas de fiche, GO) ; ⚠️ jamais commité = zéro backup |
+| agent-alternance | VPS — `~veillebot/alternance` | sous git, HEAD `d90b5d4` (16 fichiers) | 2026-08-03 (run 05:15) | **actif** | pipeline script-only FT/Perplexity, brief 7h45, HITL absolu — documenté le 12/07 ✅ ; *corrigé le 03/08 : « pas de git » était faux depuis le 31/07, backup GitHub privé actif* |
+| ads-studio | VPS — `~veillebot/ads-studio` | 10+ commits, backup GitHub privé | 2026-07-30 (11 générations) | **actif** | code trouvé sur le VPS le 12/07, pointé dans le pivot ; *corrigé le 03/08 : l'avertissement « jamais commité = zéro backup » était faux depuis le 12/07* |
 | molty-openclaw | user `openclaw` (VPS, vide) + `~/clawd` (Mac) | 0 | 2026-04-07 | **expérimental** (constat 12/07) | rien de déployé : user VPS vide (dotfiles d'avril), workspace identité local seulement ; la veille réelle = `veillebot-weekly` (Hermes, lundi 7h) |
 | bot-automobile | **code introuvable** (Mac + VPS vérifiés 12/07) | — | — | **non localisé** | scraping Playwright + alertes Telegram ([[contexte-hector]]) — aucune trace trouvée ; à pointer par Hector s'il existe encore quelque part |
 | excuses-amandine | `~/Desktop/excuses-amandine` | pas de git | ~2026-06-30 | **expérimental** | one-shot perso (médias + page), sessions Claude Code |
