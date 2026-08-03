@@ -129,14 +129,14 @@ Agence n8n : audit de processus, workflows sur mesure, agents IA supervisés ave
 
 ## Rang 3 — cible valable, mais un point à lever avant d'écrire
 
-### 14. Kairos (société SACHA KISSOUS SOLUTIONS) · `à vérifier`
+### 14. Kairos (société SACHA KISSOUS SOLUTIONS) · `vérifié le 03/08`
 Agence no-code / low-code : applications métier, master data management, ligne **« AI Agents Agency »** et « AI Automation » sur Make et n8n. Clients : Kering, Schneider Electric, Convelio.
 30 rue Jacques-Dulud, **Neuilly-sur-Seine (92)** · **2 personnes nommées**.
 **Personne** : Sacha Kissous, *CEO* et Président de la SAS (INSEE, SIREN 918630898) · David Dratwa, *CTO*.
 **Chemin** : ⚠️ **deux adresses concurrentes.** `sacha@ze-kairos.com` est affichée en clair, **mais tous les `mailto:` du site pointent vers `sacha@sksolutions.io`** — c'est cette dernière qui est réellement routée. Écrire aux deux, ou privilégier `sksolutions.io`.
 **Pourquoi lui** : leur brique IA la plus concrète est l'extraction documentaire par agent. [[_legitvision]] et [[_vivo]] sont deux produits en production bâtis sur Claude Vision pour exactement ça.
 
-### 15. Massive Dynamic · `à vérifier`
+### 15. Massive Dynamic · `à vérifier` — rien à lever, la mention est une mise en garde
 Suite IA d'orchestration pour les **opérations publicitaires** : agents spécialisés qui pilotent les campagnes, analysent et optimisent. Pre-seed 3 M€ (Seedcamp).
 Paris **selon la presse uniquement** — aucune ville sur le site, `/privacy` et `/privacy-policy` en **404** · très petite équipe, fonds levés notamment pour agrandir l'engineering.
 **Personne** : Trystan Chabert, *co-fondateur* (ex-Head of Growth chez Voodoo) · Guillaume Le Roy, *co-fondateur* (ex-Head of Engineering chez Qonto) — **source presse Seedcamp, aucun de ces noms n'apparaît sur leur site**.
@@ -144,14 +144,14 @@ Paris **selon la presse uniquement** — aucune ville sur le site, `/privacy` et
 **Pourquoi lui** : [[_ads-studio]] est leur produit vu du côté créa — usine à créas semi-auto, génération vidéo IA branchée sur Meta Ads, garde-fous de dépense. Même couple automatisation + contrôle du budget.
 ⚠️ Le co-fondateur technique vient de Qonto : l'exigence d'ingénierie sera réelle.
 
-### 16. Calk AI (Calk SAS) · `à vérifier`
+### 16. Calk AI (Calk SAS) · `vérifié le 03/08`
 **Plateforme no-code de création d'agents IA** connectés aux outils métier et aux données internes. Cible affichée : agences marketing et petites équipes.
 60 rue François-1er, **Paris 8e** (~40 min) · société créée le 19/02/2025, aucun effectif publié, ni page équipe ni page carrières.
 **Personne** : ⚠️ **Quentin Fournier, *CEO & Co-founder*, n'est confirmé par l'entreprise nulle part** — son nom n'apparaît sur aucune page de `calk-ai.com`, et le registre donne pour président une personne morale (QFM Holding). Source : presse tech uniquement. **À lever avant tout message nominatif.**
 **Chemin** : `hello@calk-ai.com` — `mailto:` confirmé par grep dans le HTML de la home, et repris dans `/terms`. Un « Chat on WhatsApp » est mentionné mais **aucun numéro n'existe dans la page** : ne pas compter dessus.
 **Pourquoi lui** : il a construit pour lui-même ce que Calk vend aux agences — [[_ads-studio]] et [[_autonomous]] tournent en production, branchés sur de vrais outils métier.
 
-### 17. Volteyr · `à vérifier`
+### 17. Volteyr · `vérifié le 03/08`
 Agence d'automatisation IA pour startups : **Sales & Growth** (lead routing, enrichissement, relances), Ops & Customer Success, Finance & Admin.
 Spaces, 124 rue Réaumur, **Paris 2e** (adresse de coworking) — activité annoncée aussi sur Lyon et Nice · moins de 10 personnes, 2 profils nommés.
 **Personne** : Hany Mohsen — ⚠️ **réfutation** : les mots « fondateur », « co-fondateur », « CEO » **n'apparaissent nulle part** à côté de son nom. Le libellé littéral est *« Business development & Chef de projet »*. Juan Salazar : *« Stratégie marketing & Croissance »*.
@@ -159,7 +159,7 @@ Spaces, 124 rue Réaumur, **Paris 2e** (adresse de coworking) — activité anno
 **Pourquoi lui** : leur brique Sales & Growth *est* [[_autonomous]], déjà en production.
 ⚠️ Quatre visages sans texte figurent sur leur page Paris : **statut indéterminé** — ne pas les contacter comme s'ils y travaillaient. Un seul nom est un client identifié.
 
-### 18. Hyperstack Studio · `à vérifier`
+### 18. Hyperstack Studio · `vérifié le 03/08`
 Agence No-Code, Data & IA : ERP sur mesure, migration Excel, **poste dédié « AI Agents Builder »** dans l'équipe. Stack : Airtable, n8n, Make, Xano, BigQuery, dbt.
 « Paris, France » uniquement — **aucune adresse postale, `/mentions-legales` en 404** · **~10 personnes** listées.
 **Personne** : « Louis », *Founder* — ⚠️ **prénom seul, comme les 10 membres**. Sans mentions légales, impossible de rattacher ce prénom à une identité légale depuis le site.
@@ -167,7 +167,7 @@ Agence No-Code, Data & IA : ERP sur mesure, migration Excel, **poste dédié « 
 **Pourquoi lui** : ils ont un poste « AI Agents Builder » — [[_hermes-polymarket]] et [[_autonomous]] montrent qu'il construit et *exploite* ce type d'agents, au-delà des workflows.
 ⚠️ **Piège relevé** : des noms apparaissent sur leur page « Agence n8n Paris » avec des titres de co-fondateur qui **ne correspondent pas** à l'équipe affichée sur `/a-propos`. Ne pas s'en servir comme contacts sans vérification.
 
-### 19. DevFlows (SASU) · `à vérifier`
+### 19. DevFlows (SASU) · `vérifié le 03/08` — ⚠ SASU devenue SARL
 Agence n8n / no-code pour PME et ETI. Volet IA explicite, cité littéralement : **« Intégration IA avancée (Claude, OpenAI) »** et « agents IA via OpenAI, Claude ou des modèles open source ».
 99 avenue Achille-Peretti, **Neuilly-sur-Seine (92)** — même département qu'Hector · taille inconnue : « 14 experts dédiés » annoncé sur la home, **aucune page équipe, aucun nom, aucune photo**.
 **Personne** : **aucune.** Aucun dirigeant publié nulle part sur le site.
@@ -175,7 +175,7 @@ Agence n8n / no-code pour PME et ETI. Volet IA explicite, cité littéralement :
 **Pourquoi lui** : **seule agence de la liste à nommer Claude noir sur blanc dans son offre**, et il code contre l'API Claude au quotidien avec trois produits en production dessus.
 ⚠️ Identifier une personne avant tout message nominatif : le « 14 experts » n'est étayé par rien.
 
-### 20. Dev Together · `à vérifier`
+### 20. Dev Together · `à vérifier` — personne toujours non nommée
 Agence IA et développement logiciel sur mesure (Node.js, React, Rust, IA générative, agents IA, MVP et SaaS). Récit de fondation : « après 15 ans passés dans un studio de développement, son fondateur décide de lancer Dev Together ».
 39 rue de la Gare-de-Reuilly, **Paris 12e** (~45 min) + Neuilly-Plaisance (93) · taille inconnue (« 20+ années d'expérience cumulées », « 14+ projets »).
 **Personne** : **aucune.** `/mentions-legales` en 404 — aucun dirigeant identifiable depuis le site.
@@ -198,3 +198,27 @@ Agence IA et développement logiciel sur mesure (Node.js, React, Rust, IA géné
 - [[01-Projects/agent-alternance/decisions-et-lecons|decisions-et-lecons]] — HITL absolu : aucun envoi automatique
 - [[contexte-hector]] — profil, stack et projets livrés
 - [[veille-a-la-demande]] — le runbook de veille, dont la discipline « canal indisponible = on saute et on le dit »
+
+---
+
+## Levée des vérifications — 2026-08-03
+
+Recherche web en **lecture seule**, sources tierces croisées (registre, annuaires, écrits publics des intéressés). Les fiches ci-dessous portaient un `à vérifier` depuis le 31/07 ; voici ce que chaque contrôle a donné. **Ce qui n'a pas pu être confirmé reste marqué comme tel** — une vérification qui échoue est un résultat, pas un blanc à combler.
+
+**14 · Kairos — TRANCHÉ.** L'ambiguïté des deux adresses est levée en faveur de `sacha@sksolutions.io` : c'est celle que les annuaires professionnels donnent en premier, et elle corrobore le constat brut du 31/07 (tous les `mailto:` du site y pointent). La société est **SACHA KISSOUS SOLUTIONS**, SASU, SIRET `91863089800016`, **30 rue Jacques Dulud, 92200 Neuilly-sur-Seine**. `sacha@ze-kairos.com` existe aussi mais n'est pas celle du site.
+
+**15 · Massive Dynamic — RIEN À LEVER.** La mention n'était pas un doute mais une mise en garde (« le co-fondateur technique vient de Qonto : l'exigence d'ingénierie sera réelle »). Elle reste valable telle quelle.
+
+**16 · Calk AI — CONFIRMÉ.** Quentin Fournier est bien co-fondateur : il l'écrit lui-même publiquement (*« Why I Started Calk AI »*, Medium, sous son propre compte) et un annuaire French Tech le donne CEO & co-fondateur. La réfutation du 31/07 portait sur l'**absence du nom sur `calk-ai.com`** — elle reste vraie, mais elle est désormais compensée par une source de première main. Le président au registre peut être une autre personne : dirigeant légal et dirigeant opérationnel ne coïncident pas toujours.
+
+**17 · Volteyr — CONFIRMÉ par le registre.** VOLTEYR, SASU, SIREN `992475210`, créée le **2025-09-27**, siège **38 rue des Mathurins, 75008 Paris** — **Hany Mohsen en est le président**. La réfutation du 31/07 (« les mots fondateur / CEO n'apparaissent nulle part ») tombe : le registre tranche. ⚠️ Une source décrit l'agence comme lyonnaise alors que le siège est parisien — divergence non résolue, sans conséquence pour un envoi.
+
+**18 · Hyperstack Studio — PRÉNOM LEVÉ.** « Louis » est **Louis Adam**, fondateur. Fait notable pour ce profil : Hyperstack est la **seule agence française listée n8n Expert Partner** sur `experts.n8n.io`, et travaille Paris + Nantes. ⚠️ Le piège du 31/07 tient toujours : Arthur Corré est cité co-fondateur par des comparatifs tiers, pas par les pages de l'entreprise — ne pas s'appuyer dessus dans un message nominatif.
+
+**19 · DevFlows — DIRIGEANT IDENTIFIÉ, ET LA FICHE ÉTAIT PÉRIMÉE.** DEVFLOWS, SIREN `914685532`, **13 rue Rieux, 92100 Boulogne-Billancourt**. Gérant : **Nadjib Mellak** ; co-fondateur cité : Baha Eddine Berghouti. ⚠️ **La forme juridique a changé : SASU transformée en SARL le 2025-02-21** — le titre de la fiche disait SASU. Le « 14 experts », lui, est corroboré par un annuaire tiers (14 employés), toujours pas par l'entreprise.
+
+**20 · Dev Together — NON LEVÉ.** Le site parle d'un fondateur (« après 15 ans en studio de développement ») **sans jamais le nommer**, et aucune source tierce ne le nomme non plus. Adresse confirmée : **39 rue de la gare de Reuilly, Paris 12e**. Reste `à vérifier` : pas d'envoi nominatif possible en l'état.
+
+### Twitter/X — retesté, toujours inutilisable
+
+`x.com/search` répond **HTTP 402 Payment Required**, là où le balayage du 31/07 relevait un **404**. Le mur a changé de nature : ce n'est plus un point d'entrée cassé, c'est un accès payant. Conclusion inchangée — **le canal reste hors de portée sans API payante**, et il reste celui où les fondateurs annoncent leurs recrutements. À rouvrir si une clé API X est prise un jour, pas avant.
