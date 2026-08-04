@@ -25,6 +25,7 @@ Une interface de commandement locale du second cerveau : ouvrir une page et voir
 
 - [x] ~~Trancher l'exception `ReadWritePaths` du collecteur~~ — **supprimée** le 03/08 : le collecteur recopie `atlas.db` dans son `/tmp` privé et lit la copie. `ReadWritePaths=` est vide, `~/.hermes` est strictement en lecture seule.
 - [ ] Décider si `polymarket.db` (5,9 Go) entre dans le collecteur, et sous quelles requêtes bornées.
+- [ ] **2026-08-09 (dimanche) — supprimer `~/dream-viewer.bak-20260804`** (950 Mo). Filet local pris avant la réécriture d'historique du 04/08 ; le dépôt distant fait filet depuis, la sauvegarde n'a plus de rôle passé cette date.
 
 ## Décisions
 
@@ -33,6 +34,7 @@ Une interface de commandement locale du second cerveau : ouvrir une page et voir
 - **2026-08-02 — `polymarket.db` (5,9 Go) et `bot3.db` (1,7 Go) hors périmètre** du collecteur tant que les agrégats ne sont pas vérifiés sur index.
 - **2026-08-03 — dépôt privé GitHub** après scan anti-secrets. Le code ne doit embarquer ni contenu du vault ni URL de tunnel : deux éléments retirés à cette occasion.
 - **2026-08-03 — l'exception `ReadWritePaths` est supprimée, pas déplacée.** Recopie dans le `/tmp` privé du service (`PrivateTmp`) plutôt qu'une ouverture en écriture de `~/.hermes`.
+- **2026-08-04 — pas de GC réclamé à GitHub** après la purge des captures : les objets ne sont plus atteignables, le dépôt est privé, GitHub collectera de lui-même. Décision d'Hector, prise en connaissance du délai de quelques jours.
 
 ## Ressources liées
 
