@@ -25,6 +25,7 @@ Une interface de commandement locale du second cerveau : ouvrir une page et voir
 
 - [x] ~~Trancher l'exception `ReadWritePaths` du collecteur~~ — **supprimée** le 03/08 : le collecteur recopie `atlas.db` dans son `/tmp` privé et lit la copie. `ReadWritePaths=` est vide, `~/.hermes` est strictement en lecture seule.
 - [ ] Décider si `polymarket.db` (5,9 Go) entre dans le collecteur, et sous quelles requêtes bornées.
+- [ ] **Dette assumée (v3, 04/08) — le contexte WebGL de l'accueil est détruit et recréé à chaque ouverture de module.** La sphère recule et s'estompe, puis la vue se déploie : le geste est le bon, mais la scène est reconstruite au retour. La conserver vivante derrière les vues de module exigerait de toucher à ces vues — arbitré « OK pour l'instant » par Hector, à reprendre le jour où les modules passeront en plein écran.
 - [ ] **2026-08-09 (dimanche) — supprimer `~/dream-viewer.bak-20260804`** (950 Mo). Filet local pris avant la réécriture d'historique du 04/08 ; le dépôt distant fait filet depuis, la sauvegarde n'a plus de rôle passé cette date.
 
 ## Décisions
