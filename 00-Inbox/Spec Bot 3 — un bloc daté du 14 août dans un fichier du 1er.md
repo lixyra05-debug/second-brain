@@ -16,6 +16,10 @@ cree: 2026-08-03
 
 Relevé le 2026-08-03 en lecture seule pendant l'arbitrage stockage du VPS ([[_dream-console]]). Les **chiffres de croissance** du même bloc (0,735 Gio/j, `trades` 52 % du fichier), eux, sont **corroborés par une mesure indépendante** — c'est la datation seule qui est en cause.
 
+## Devenue vérifiable — ajout du 2026-08-15
+
+Les dates du bloc sont désormais **passées** : l'anomalie, indécidable le 03/08, se tranche depuis le 15/08 en lecture seule sur le VPS — **comparer les archives et la ligne `report_daily` réellement produites les 13-14/08 au bloc de la spec**. Si les artefacts réels correspondent, le bloc était un exemple écrit au futur ; s'ils manquent ou diffèrent, un maillon se date en avance et les gardes cités plus haut raisonnent sur un calendrier faux. À trancher dans une session VPS (décision d'Hector du 15/08) ; la note reste en Inbox d'ici là. *(Ajout Claude.)*
+
 ## Liens
 
 - [[_hermes-polymarket]] — Bot 3 y est le collecteur BTC-5m
