@@ -88,3 +88,4 @@ D'où la formule qui vaut pour tout le reste : **une propriété non testée n'e
 - [[01-Projects/hermes-polymarket/decisions-et-lecons|hermes — decisions-et-lecons]] — « winrate n'est pas edge » : une *gate* qui mesure la mauvaise chose valide n'importe quoi
 - [[01-Projects/dream-console/decisions-et-lecons|dream-console — decisions-et-lecons]] — forme n° 5
 - [[vps-git-et-deploiement]] — la discipline de déploiement qui en découle
+- [[Douze pannes silencieuses]] — la page sœur (chantier [[_jarvis-voice]], 11-15/08) : douze cas en cinq jours, et **deux familles que celle-ci n'a pas** — le garde-fou qui détruit ce qu'il protège, la correction qui maquille la sortie pendant que l'état interne continue de mentir. *(Lien ajouté par Claude le 2026-08-15 sur demande d'Hector ; la page liée est une proposition à valider.)*
