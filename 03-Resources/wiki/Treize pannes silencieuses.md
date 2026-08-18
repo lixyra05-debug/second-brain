@@ -4,17 +4,17 @@ tags: [ia, dev, agents]
 cree: 2026-08-15
 ---
 
-# Douze pannes silencieuses — l'instrument n'a pas échoué, il a menti
+# Treize pannes silencieuses — l'instrument n'a pas échoué, il a menti
 
-> **Proposition Claude — à valider.** Deuxième page de `03-Resources/wiki/`, écrite le 2026-08-15 depuis `results/PANNES-SILENCIEUSES.md` du chantier [[_jarvis-voice]] (11-15/08/2026). **Hector n'a pas relu.** La première page, [[La panne silencieuse]], catalogue cinq formes vues sur cinq systèmes en deux mois ; celle-ci ajoute douze cas d'un seul chantier en cinq jours — et **deux familles que la première n'avait pas**.
+> **Proposition Claude — à valider.** Deuxième page de `03-Resources/wiki/`, écrite le 2026-08-15 depuis `results/PANNES-SILENCIEUSES.md` du chantier [[_jarvis-voice]] (11-18/08/2026). **Hector n'a pas relu section par section.** Renommée « Treize » le 2026-08-18 sur GO d'Hector, avec l'ajout de la n° 13 — le reste de la page est inchangé depuis le 15/08. La première page, [[La panne silencieuse]], catalogue cinq formes vues sur cinq systèmes en deux mois ; celle-ci ajoute treize cas d'un seul chantier en huit jours — et **deux familles que la première n'avait pas**.
 
-Aucune des douze n'a planté. Chacune a produit une sortie plausible, bien formée, souvent assortie d'un verdict affirmatif. Une panne qui se signale coûte le temps de la corriger ; **une panne qui se tait coûte tout ce qu'on a bâti dessus** — ici : 240 tours de mesure invalides, trois conclusions retirées après avoir été énoncées, un commit qui a failli partir sur un scan qui n'avait rien scanné, et un assistant vocal qui racontait une recherche que personne n'avait faite.
+Aucune de ces pannes n'a planté aux yeux de l'utilisateur — la n° 13 levait bien une exception, mais une couche au-dessus la convertissait en réponse plausible. Chacune a produit une sortie plausible, bien formée, souvent assortie d'un verdict affirmatif. Une panne qui se signale coûte le temps de la corriger ; **une panne qui se tait coûte tout ce qu'on a bâti dessus** — ici : 240 tours de mesure invalides, trois conclusions retirées après avoir été énoncées, un commit qui a failli partir sur un scan qui n'avait rien scanné, et un assistant vocal qui racontait une recherche que personne n'avait faite.
 
 Les numéros suivent l'ordre de découverte, les familles regroupent par mécanisme.
 
 ## I. L'instrument mesure autre chose que ce qu'il prétend
 
-*(n° 1, 2, 3, 8, 9, 10, 11)*
+*(n° 1, 2, 3, 8, 9, 10, 11, 13)*
 
 1. **Le TTS rapide qu'aucune statistique de signal ne condamne.** Le 4 bits, le plus rapide du balayage, audio propre — et un WER de relecture de 23,6 % contre 4,5 % : cinq fois pire, pour 52 ms. Variante perverse : un locuteur anglophone lisant du français — crêtes saines, WER 87,8 %. → *Un TTS qu'on n'a pas fait relire n'est pas un TTS qu'on a évalué.*
 2. **Le veilleur mémoire qui juge sur 8 % de la fenêtre.** Verdict net et chiffré, calculé sur 15 s d'une passe qui en durait 190 — le chargement des modèles, aucun tour mesuré. → *Un instrument qui échantillonne publie sa couverture à côté de son verdict ; un verdict sans couverture est une opinion.*
@@ -23,6 +23,7 @@ Les numéros suivent l'ordre de découverte, les familles regroupent par mécani
 9. **Le scan anti-secrets qui répond « 0 hit » sans avoir cherché.** `zsh` ne découpe pas une variable non quotée : `grep` a reçu cinq chemins concaténés en un seul nom introuvable, et `|| echo "0 hit"` a traduit l'erreur en absence. → *Distinguer « rien trouvé » de « pas cherché » : un verdict négatif publie son dénominateur.* Et : un idiome shell éprouvé sous un interpréteur ne l'est pas sous un autre.
 10. **Le critère de validation qu'on ne pouvait satisfaire qu'en inventant.** Le critère de recette exigeait un chiffre introuvable dans la source : le satisfaire, c'était halluciner — passer, c'était être cassé. Écrit par la personne qui connaît le mieux le vault, donc celle dont on vérifie le moins les chiffres. → *Un critère est un instrument : il se vérifie contre la source, avant de mesurer. Quand un critère cite un chiffre, ce chiffre a un fichier et une ligne, ou il n'a rien.*
 11. **Le prédicat qui se désarme après le premier succès.** Le correctif d'appel d'outil ne tenait qu'au premier tour outillé : les résultats des tours *passés* se sérialisent aussi en `role:"tool"`, donc **chaque succès reclassait les appels suivants** — plus l'outil marchait, moins il était protégé. Le banc posait chaque question sur une conversation neuve : l'état exact où le prédicat est juste. → *Valider un correctif dans l'état où la panne vit, pas seulement dans l'état neuf.*
+13. **L'outil que tous les bancs voyaient marcher et qui n'avait jamais tourné en production** *(ajoutée le 18/08)*. `chercher_vault`, mesuré sous toutes les coutures — 10/10 au banc du 17/08, coût chiffré à la milliseconde — n'avait **jamais** fonctionné à la voix depuis sa création le 13/08 : l'index SQLite naît à l'import, dans le thread principal, mais l'outil s'exécute dans le thread du client audio, et une connexion SQLite est liée à son thread de naissance. Chaque appel vocal levait `ProgrammingError` — que le rattrape-tout du client convertissait en `{"error": …}` rendu **au modèle comme résultat**, et la voix disait « rien trouvé ». Tous les bancs appelaient depuis le thread de l'import : le seul état où la panne ne peut pas exister. Corollaire de la n° 11, où l'état n'est plus l'historique mais le thread. → *Un banc qui appelle la fonction valide la fonction dans la topologie du banc ; ce que la production ajoute — threads, boucles, rattrape-tout — est précisément ce que le banc doit reconstruire, sinon la validation porte sur un programme qui n'existe qu'en validation.*
 
 ## II. Le garde-fou détruit ce qu'il devait protéger
 
