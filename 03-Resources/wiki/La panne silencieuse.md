@@ -78,6 +78,28 @@ Les quatre premières formes sont des **pannes**. La cinquième est une **illusi
 
 D'où la formule qui vaut pour tout le reste : **une propriété non testée n'existe pas.**
 
+## Proposition de l'agent — une sixième forme, trouvée deux fois le même jour
+
+> Écrite le 2026-08-23 sur demande d'Hector (« note aussi la famille »). **Le corps validé du 03/08 n'est pas modifié** : cette section est une proposition, à valider ou à refuser.
+
+### 6. L'alerte juste que personne n'écoute
+
+Le système ne ment pas. Il détecte, il formule correctement, il émet à l'heure. **Et le message s'arrête à un saut que personne ne regarde.**
+
+> **Deux cas le 2026-08-23, dans deux systèmes sans rapport.**
+> — `format_recap()` de la veille IA construisait le récap Telegram **sans jamais afficher `run_stats["errors"]`**. Le compteur d'erreurs était correctement rempli depuis le 03/06 ; un run en échec envoyait un message **identique** à un run sain. L'information existait, elle n'avait aucune sortie.
+> — `bot3-heartbeat` rapporte `heartbeat ROUGE — … disk_free: 5.3 G (mini 15 G) → /fail`, et le POST vers healthchecks.io répond **HTTP 200 « OK » en ~130 ms, chaque minute, depuis six jours**. Le calcul est juste, le seuil est bon, la livraison réussit. **C'est le dernier saut — healthchecks.io vers l'humain — qui est muet**, et le disque sature vers le 27/08. Voir [[_hermes-polymarket]].
+
+**Signature** : un canal d'alerte qui n'a **jamais délivré une vraie alerte à un humain**. Pas un test qui n'a jamais échoué — un **chemin** qui n'a jamais servi.
+
+**Ce qu'elle ajoute aux cinq autres.** Les cinq premières décrivent un système qui **ment ou se tait**. Celle-ci décrit un système qui **dit vrai, à l'heure, et dans le vide**. C'est la forme n° 5 déplacée d'un cran : là où « une propriété non testée n'existe pas », ici **un canal jamais emprunté n'existe pas**. On teste volontiers l'émetteur ; on ne teste presque jamais le trajet complet jusqu'à l'œil.
+
+**Aggravant, et c'est ce qui l'a rendue invisible six jours** : `bot3-heartbeat` échoue aussi dans `systemctl` — mais **pour une autre raison que celle qu'il signale**. C'est un `oneshot` à `TimeoutStartSec=45` qui poste son alerte avec succès **puis reste pendu** ; systemd le tue en `status=15/TERM`, `Failed with result 'timeout'`. **1 484 échecs en trois jours, dont aucun ne dit « le disque se remplit ».** La forme n° 3 (le job pendu) fabrique ici le bruit qui enterre la forme n° 6 — et rejoint la parade déjà écrite plus haut : *un test qui crie à chaque usage nominal est un test qu'on désarme.* Deux formes superposées se protègent l'une l'autre.
+
+**Parade — livrer une fausse alerte, une fois, et vérifier qu'elle arrive.** Le seul test qui vaut est de bout en bout : forcer l'émission d'une alerte réelle et confirmer qu'**un humain l'a reçue là où il regarde déjà**. Pas « le POST a répondu 200 » — *200 est la réponse du saut n−1, jamais celle du dernier*. Corollaire de conception : **une alerte doit atterrir où l'attention vit** (ici Telegram), pas là où c'était commode de l'envoyer. Et tout canal doit porter une date de dernière délivrance vérifiée : un canal sans cette date est un canal non testé.
+
+*(La correction du 23/08 sur `format_recap()` — bloc « 🚨 Anomalies » — n'a été trouvée qu'en câblant une escalade vers `errors` : sans cette vérification, l'escalade elle-même serait née muette. Troisième instance évitée de justesse.)*
+
 ## Liens
 
 - [[contexte-hector]] — la règle d'origine : dead-man's switch externe, zéro panne *silencieuse*
