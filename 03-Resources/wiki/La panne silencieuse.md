@@ -78,9 +78,11 @@ Les quatre premières formes sont des **pannes**. La cinquième est une **illusi
 
 D'où la formule qui vaut pour tout le reste : **une propriété non testée n'existe pas.**
 
-## Proposition de l'agent — une sixième forme, trouvée deux fois le même jour
+## Proposition de l'agent — deux formes de plus, trouvées le même jour
 
-> Écrite le 2026-08-23 sur demande d'Hector (« note aussi la famille »). **Le corps validé du 03/08 n'est pas modifié** : cette section est une proposition, à valider ou à refuser.
+> Écrite le 2026-08-23 sur demande d'Hector (« note aussi la famille », puis « cette famille mérite une ligne au wiki »). **Le corps validé du 03/08 n'est pas modifié** : cette section est une proposition, à valider ou à refuser.
+>
+> La journée du 23/08 a produit **deux** formes que les cinq premières ne couvraient pas : la n° 6, trouvée deux fois, et la n° 7, trouvée **trois** fois dans trois systèmes sans rapport.
 
 ### 6. L'alerte juste que personne n'écoute
 
@@ -99,6 +101,21 @@ Le système ne ment pas. Il détecte, il formule correctement, il émet à l'heu
 **Parade — livrer une fausse alerte, une fois, et vérifier qu'elle arrive.** Le seul test qui vaut est de bout en bout : forcer l'émission d'une alerte réelle et confirmer qu'**un humain l'a reçue là où il regarde déjà**. Pas « le POST a répondu 200 » — *200 est la réponse du saut n−1, jamais celle du dernier*. Corollaire de conception : **une alerte doit atterrir où l'attention vit** (ici Telegram), pas là où c'était commode de l'envoyer. Et tout canal doit porter une date de dernière délivrance vérifiée : un canal sans cette date est un canal non testé.
 
 *(La correction du 23/08 sur `format_recap()` — bloc « 🚨 Anomalies » — n'a été trouvée qu'en câblant une escalade vers `errors` : sans cette vérification, l'escalade elle-même serait née muette. Troisième instance évitée de justesse.)*
+
+### 7. Le seuil calibré sur un régime qui a changé
+
+Le garde-fou est correct, mesuré, documenté — **sur un système qui n'est plus celui d'aujourd'hui.** Le chiffre ne bouge pas ; c'est ce qu'il mesure qui a bougé sous lui.
+
+> **Trois fois le 2026-08-23, dans trois systèmes sans rapport.**
+> — `bot3-heartbeat` : `TimeoutStartSec=45` posé quand le run durait quelques secondes. Mesuré ce jour-là : **43,6 s et 51,6 s.** Le délai était **à l'intérieur** de la plage de fonctionnement, donc le service perdait la course deux fois sur trois — **1 484 faux échecs en trois jours**, dont aucun ne disait la vraie panne. Voir [[_hermes-polymarket]].
+> — **La garde d'espace du backup `bot3`** : son modèle `pic = clair × (1 + 1/ratio)` était juste quand la base pesait 0,85 Gio. À 16,77 Gio il annonçait **8,64 Gio** là où la construction en a consommé **plus de 15,1** — et le disque est tombé à zéro le 23/08 à 16:33:37, emportant deux bots de trading pendant deux minutes.
+> — `veillebot-weekly` : `TimeoutStartSec=900`, commenté *« un run peut prendre jusqu'à 15 min »* — estimation faite pour ~31 items à scorer. Le premier run après le correctif du dédoublonnage en a présenté **130**, et le run a été tué à **918 s**, une seconde après le début de la curation. Voir [[_veille-ia]].
+
+**Signature** : un seuil dont **le commentaire cite une mesure datée**, et dont la grandeur mesurée a changé d'ordre depuis. Le code n'a pas bougé, le système si.
+
+**Ce qu'elle ajoute aux six autres.** Les six premières décrivent une information qui n'arrive pas. Celle-ci décrit une information juste, arrivée, **et devenue fausse par le passage du temps** — sans que rien ne le signale, puisque rien n'a changé dans le code. C'est la seule forme qui **s'installe toute seule** : il suffit d'attendre. Et elle est asymétrique — quand le seuil dérive vers le trop strict, on récolte du bruit (le heartbeat) ; **quand il dérive vers le trop permissif, on récolte la panne dont il protégeait** (le backup). *Libérer de la place a rendu le système plus dangereux* : tant que la garde refusait, elle refusait proprement.
+
+**Parade — dater le seuil, pas seulement le justifier.** Un seuil doit porter dans son commentaire **la mesure, sa date, et la grandeur dont il dépend** : « 1800 s, mesuré le 23/08 sur 130 items à scorer ; le poste dominant est le scoring, qui croît avec le nombre d'items sans verdict ». Ainsi le prochain lecteur sait **à quoi le comparer** au lieu de découvrir l'écart par la panne. Corollaire : **un seuil qui ne dit pas de quoi il dépend est un seuil qu'on ne peut pas re-mesurer** — et qu'on finira par monter au jugé, ce qui déplace la panne sans la voir.
 
 ## Liens
 
