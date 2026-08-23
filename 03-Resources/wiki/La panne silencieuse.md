@@ -10,9 +10,9 @@ cree: 2026-08-03
 
 Une panne bruyante se répare. Une panne silencieuse s'installe.
 
-Le principe est déjà dans le vault, hérité de l'incident Curator : *« dead-man's switch **externe** — objectif : zéro panne **silencieuse**, pas zéro panne »* ([[contexte-hector]]). Ce qui manquait, c'est le **catalogue des formes** que prend le mensonge. Cinq systèmes indépendants ont produit la même panne en deux mois ; les formes se répètent, donc elles s'anticipent.
+Le principe est déjà dans le vault, hérité de l'incident Curator : *« dead-man's switch **externe** — objectif : zéro panne **silencieuse**, pas zéro panne »* ([[contexte-hector]]). Ce qui manquait, c'est le **catalogue des formes** que prend le mensonge. Cinq systèmes indépendants ont produit la même panne en deux mois ; les formes se répètent, donc elles s'anticipent. *(Deux formes ajoutées le 2026-08-23 — la n° 6 trouvée deux fois dans la journée, la n° 7 trois fois dans trois systèmes sans rapport. Relues et validées par Hector le jour même.)*
 
-## Les cinq formes
+## Les sept formes
 
 ### 1. `exit 0` sur un contenu vide
 
@@ -54,36 +54,6 @@ Le système accepte la consigne, la stocke, l'affiche — et ne l'exécute pas.
 
 **Signature** : une propriété de sécurité qu'on a **lue** au lieu de la **tester**.
 
----
-
-## Les parades
-
-Aucune n'est coûteuse. Toutes se posent une fois.
-
-**Un heartbeat externe.** Le système ne peut pas attester de lui-même. Un ping vers un tiers (`healthchecks.io`, UptimeRobot) qui **alerte sur l'absence** de signal, pas sur sa présence : c'est le seul dispositif qui survit à la mort du processus censé prévenir. Déjà en place sur le Bot 3 (heartbeat minute) et sur Autonomous (3 monitors).
-
-**Un préflight, pas un post-mortem.** Vérifier la condition d'exécution **avant** de lancer, et échouer bruyamment si elle manque. Un service qui répond `200` sur `/health` en servant un contenu cassé est exactement la forme n° 1 ; la parade est de **construire la réponse complète avant d'ouvrir le port**, et de mourir sinon.
-
-**Comparer les magasins.** Dès qu'un même fait vit à deux endroits, quelque chose doit les confronter et **afficher l'écart comme une donnée**, pas le corriger en silence. C'est ce qui a rendu la forme n° 4 visible.
-
-**Des assertions structurelles, pas volumétriques.** Un test qui vérifie « 2 rêves » crie à chaque dimanche 20 h et finit ignoré ; un test qui vérifie « chaque rêve couvre une période strictement positive » attrape la vraie erreur. **Un test qui crie à chaque usage nominal est un test qu'on désarme.**
-
-**Rendre bruyant ce qui est muet.** Un `except` qui avale une erreur et rend une liste vide produit un module qui affiche « 0 » en ayant l'air correct. Journaliser la cause coûte une ligne.
-
-**Tester la propriété, jamais la lire.** Pour une garantie de sécurité : tenter l'action interdite et vérifier qu'elle échoue. Un fichier témoin qu'on essaie d'écrire, un `curl` qui doit être bloqué, un `DELETE` qui doit être refusé par un trigger.
-
-## Ce que la forme n° 5 ajoute aux quatre autres
-
-Les quatre premières formes sont des **pannes**. La cinquième est une **illusion de garantie** : rien n'est cassé, tout fonctionne, et la protection sur laquelle on comptait n'a jamais existé. C'est la plus dangereuse, parce qu'elle ne se manifeste que le jour où on en a besoin.
-
-D'où la formule qui vaut pour tout le reste : **une propriété non testée n'existe pas.**
-
-## Proposition de l'agent — deux formes de plus, trouvées le même jour
-
-> Écrite le 2026-08-23 sur demande d'Hector (« note aussi la famille », puis « cette famille mérite une ligne au wiki »). **Le corps validé du 03/08 n'est pas modifié** : cette section est une proposition, à valider ou à refuser.
->
-> La journée du 23/08 a produit **deux** formes que les cinq premières ne couvraient pas : la n° 6, trouvée deux fois, et la n° 7, trouvée **trois** fois dans trois systèmes sans rapport.
-
 ### 6. L'alerte juste que personne n'écoute
 
 Le système ne ment pas. Il détecte, il formule correctement, il émet à l'heure. **Et le message s'arrête à un saut que personne ne regarde.**
@@ -96,7 +66,7 @@ Le système ne ment pas. Il détecte, il formule correctement, il émet à l'heu
 
 **Ce qu'elle ajoute aux cinq autres.** Les cinq premières décrivent un système qui **ment ou se tait**. Celle-ci décrit un système qui **dit vrai, à l'heure, et dans le vide**. C'est la forme n° 5 déplacée d'un cran : là où « une propriété non testée n'existe pas », ici **un canal jamais emprunté n'existe pas**. On teste volontiers l'émetteur ; on ne teste presque jamais le trajet complet jusqu'à l'œil.
 
-**Aggravant, et c'est ce qui l'a rendue invisible six jours** : `bot3-heartbeat` échoue aussi dans `systemctl` — mais **pour une autre raison que celle qu'il signale**. C'est un `oneshot` à `TimeoutStartSec=45` qui poste son alerte avec succès **puis reste pendu** ; systemd le tue en `status=15/TERM`, `Failed with result 'timeout'`. **1 484 échecs en trois jours, dont aucun ne dit « le disque se remplit ».** La forme n° 3 (le job pendu) fabrique ici le bruit qui enterre la forme n° 6 — et rejoint la parade déjà écrite plus haut : *un test qui crie à chaque usage nominal est un test qu'on désarme.* Deux formes superposées se protègent l'une l'autre.
+**Aggravant, et c'est ce qui l'a rendue invisible six jours** : `bot3-heartbeat` échoue aussi dans `systemctl` — mais **pour une autre raison que celle qu'il signale**. C'est un `oneshot` à `TimeoutStartSec=45` dont le run dure en réalité **43,6 s à 51,6 s** (chronométré le 23/08) : le délai était posé **à l'intérieur** de sa plage de fonctionnement, et systemd le tuait en `status=15/TERM`, `Failed with result 'timeout'`, deux fois sur trois. **1 484 échecs en trois jours, dont aucun ne dit « le disque se remplit ».** La forme n° 7 (le seuil périmé) fabrique ici le bruit qui enterre la forme n° 6 — et rejoint la parade déjà écrite plus haut : *un test qui crie à chaque usage nominal est un test qu'on désarme.* Deux formes superposées se protègent l'une l'autre.
 
 **Parade — livrer une fausse alerte, une fois, et vérifier qu'elle arrive.** Le seul test qui vaut est de bout en bout : forcer l'émission d'une alerte réelle et confirmer qu'**un humain l'a reçue là où il regarde déjà**. Pas « le POST a répondu 200 » — *200 est la réponse du saut n−1, jamais celle du dernier*. Corollaire de conception : **une alerte doit atterrir où l'attention vit** (ici Telegram), pas là où c'était commode de l'envoyer. Et tout canal doit porter une date de dernière délivrance vérifiée : un canal sans cette date est un canal non testé.
 
@@ -116,6 +86,29 @@ Le garde-fou est correct, mesuré, documenté — **sur un système qui n'est pl
 **Ce qu'elle ajoute aux six autres.** Les six premières décrivent une information qui n'arrive pas. Celle-ci décrit une information juste, arrivée, **et devenue fausse par le passage du temps** — sans que rien ne le signale, puisque rien n'a changé dans le code. C'est la seule forme qui **s'installe toute seule** : il suffit d'attendre. Et elle est asymétrique — quand le seuil dérive vers le trop strict, on récolte du bruit (le heartbeat) ; **quand il dérive vers le trop permissif, on récolte la panne dont il protégeait** (le backup). *Libérer de la place a rendu le système plus dangereux* : tant que la garde refusait, elle refusait proprement.
 
 **Parade — dater le seuil, pas seulement le justifier.** Un seuil doit porter dans son commentaire **la mesure, sa date, et la grandeur dont il dépend** : « 1800 s, mesuré le 23/08 sur 130 items à scorer ; le poste dominant est le scoring, qui croît avec le nombre d'items sans verdict ». Ainsi le prochain lecteur sait **à quoi le comparer** au lieu de découvrir l'écart par la panne. Corollaire : **un seuil qui ne dit pas de quoi il dépend est un seuil qu'on ne peut pas re-mesurer** — et qu'on finira par monter au jugé, ce qui déplace la panne sans la voir.
+
+
+## Les parades
+
+Aucune n'est coûteuse. Toutes se posent une fois.
+
+**Un heartbeat externe.** Le système ne peut pas attester de lui-même. Un ping vers un tiers (`healthchecks.io`, UptimeRobot) qui **alerte sur l'absence** de signal, pas sur sa présence : c'est le seul dispositif qui survit à la mort du processus censé prévenir. Déjà en place sur le Bot 3 (heartbeat minute) et sur Autonomous (3 monitors).
+
+**Un préflight, pas un post-mortem.** Vérifier la condition d'exécution **avant** de lancer, et échouer bruyamment si elle manque. Un service qui répond `200` sur `/health` en servant un contenu cassé est exactement la forme n° 1 ; la parade est de **construire la réponse complète avant d'ouvrir le port**, et de mourir sinon.
+
+**Comparer les magasins.** Dès qu'un même fait vit à deux endroits, quelque chose doit les confronter et **afficher l'écart comme une donnée**, pas le corriger en silence. C'est ce qui a rendu la forme n° 4 visible.
+
+**Des assertions structurelles, pas volumétriques.** Un test qui vérifie « 2 rêves » crie à chaque dimanche 20 h et finit ignoré ; un test qui vérifie « chaque rêve couvre une période strictement positive » attrape la vraie erreur. **Un test qui crie à chaque usage nominal est un test qu'on désarme.**
+
+**Rendre bruyant ce qui est muet.** Un `except` qui avale une erreur et rend une liste vide produit un module qui affiche « 0 » en ayant l'air correct. Journaliser la cause coûte une ligne.
+
+**Tester la propriété, jamais la lire.** Pour une garantie de sécurité : tenter l'action interdite et vérifier qu'elle échoue. Un fichier témoin qu'on essaie d'écrire, un `curl` qui doit être bloqué, un `DELETE` qui doit être refusé par un trigger.
+
+## Ce que la forme n° 5 ajoute aux quatre premières
+
+Les quatre premières formes sont des **pannes**. La cinquième est une **illusion de garantie** : rien n'est cassé, tout fonctionne, et la protection sur laquelle on comptait n'a jamais existé. C'est la plus dangereuse, parce qu'elle ne se manifeste que le jour où on en a besoin.
+
+D'où la formule qui vaut pour tout le reste : **une propriété non testée n'existe pas.**
 
 ## Liens
 
